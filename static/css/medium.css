@@ -64,11 +64,11 @@
 	.buttons{
 		margin: 15px;
 		margin-top: 20px;
-		font-size: 40px;
+		font-size: 60px;
 		color: black;
-		background-color: #CDAC1B;
+		background-color: #FFBF00;
 		border: 5px solid black;
-		
+		opacity: .9;
 		height: 25%;
 		width: 43%;
 	}
