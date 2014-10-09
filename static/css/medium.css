@@ -22,9 +22,8 @@
 		height: 100%;
 	    overflow-y: auto;
 	    width: 100%;
-	    background-image: url('../images/bg.jpg');
-	    background-repeat: no-repeat;
-	    background-position: center;
+	    background-image: url('../images/bg1.png');
+	    background-repeat: repeat;
 	    background-attachment: fixed;
 	    -webkit-overflow-scrolling: touch; 
 	}
