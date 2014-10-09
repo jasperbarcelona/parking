@@ -23,7 +23,7 @@
 		height: 100%;
 	    overflow-y: auto;
 	    width: 100%;
-	    background-image: url('../images/bg1.png');
+	    background-image: url('../images/bg1.jpg');
 	    background-size: 100% 100%;
 	    background-repeat: repeat;
 	    background-attachment: fixed;
@@ -65,9 +65,9 @@
 		margin: 15px;
 		margin-top: 20px;
 		font-size: 40px;
-		color: #2AA9DF;
-		background-color: #fff;
-		border: none;
+		color: black;
+		background-color: yellow;
+		border: 3px solid black;
 		opacity: .7;
 		height: 25%;
 		width: 43%;
