@@ -60,6 +60,7 @@
 	}
 
 	.buttons{
+		display:inline-block;
 		margin: 15px;
 		margin-top: 20px;
 		font-size: 60px;
