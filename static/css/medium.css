@@ -42,7 +42,7 @@
 
 	#search{
 		margin-top: 25px;
-		position: fixed;
+		position: a;
 		width: 100%;
 	}
 
@@ -58,13 +58,6 @@
 	#content{
 		height: 100%;
 	}
-
-	#main{
-		position: absolute;
-		margin-top: 130px;
-	}
-
-
 
 	.buttons{
 		margin: 15px;
