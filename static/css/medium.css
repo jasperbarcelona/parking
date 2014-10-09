@@ -59,7 +59,13 @@
 		height: 100%;
 	}
 
+	#main{
+		margin-left: 6.5%;
+	}
+
 	.buttons{
+		padding-top: 20px;
+		float: left;
 		display:block;
 		margin: 15px;
 		margin-top: 20px;
@@ -69,7 +75,7 @@
 		border: 10px solid black;
 		border-radius: 15px;
 		opacity: .9;
-		height: 25%;
+		height: 200px;
 		width: 44%;
 	}
 
