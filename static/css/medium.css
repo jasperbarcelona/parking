@@ -21,7 +21,7 @@
 		text-align: center;
 		background-image: url('../images/bg.jpg');
 		background-size: 100% 100%;
-		background-attachment:fixed;
+		background-attachment: scroll;
 		background-repeat: no-repeat;
 	}
 
@@ -42,6 +42,7 @@
 		height: 75px;
 		bottom: 0px;
 		border-radius: 7px;
+		font-size: 35px;
 	}
 
 	#content{
