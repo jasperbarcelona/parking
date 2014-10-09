@@ -49,10 +49,10 @@
 	#searchBox{	
 		margin-bottom: 20px;
 		width: 95%;
-		height: 90px;
+		height: 30px;
 		bottom: 0px;
 		border-radius: 7px;
-		font-size: 35px;
+		font-size: 18px;
 	}
 
 	#content{
@@ -60,21 +60,31 @@
 	}
 
 	#main{
-		margin-left: 2%;
+		margin-left: 1%;
 	}
 
 	.buttons{
 		padding-top:40px;
 		float: left;
-		margin: 5px;
-		font-size: 60px;
-		color: black;
+		margin: 1px;
+		
 		background-color: #FFD700;
-		border: 10px solid black;
+		border: 3px solid black;
 		border-radius: 15px;
 		opacity: .9;
-		height: 33%;
-		width: 48%;
+		height: 27%;
+		width: 49%;
+		min-height: 150px;
+	}
+
+	.name{
+		font-size: 20px;
+		color: black;
+	}
+
+	.city{
+		font-size: 16px;
+		color: red;
 	}
 
 
