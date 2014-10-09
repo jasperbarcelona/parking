@@ -1,0 +1,67 @@
+<style>
+
+	@font-face
+	{
+		font-family: Quicksand;
+		src:url('../fonts/Quicksand-Regular.otf');
+	}
+	@font-face
+	{
+		font-family: Quicksand;
+		src:url('../fonts/Quicksand-Regular.otf');
+	}
+
+	@font-face
+	{
+		font-family: Quicksandb;
+		src:url('../fonts/Quicksand-Bold.otf');
+	}
+
+	body{
+		text-align: center;
+		background-image: url('../images/bg.jpg');
+		background-size: 100% 100%;
+		background-attachment:fixed;
+		background-repeat: repeat;
+	}
+
+	#intro{
+		position: absolute;
+		z-index: 99;
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/intro.jpg');
+		background-size: 100% 100%;
+		background-attachment:fixed;
+		background-repeat: no-repeat;
+	}
+
+	#searchBox{
+		margin-top: 10px;
+		width: 95%;
+		bottom: 0px;
+		border-radius: 7px;
+	}
+
+	#content{
+		height: 100%;
+	}
+
+	#footer{
+		margin-top: 20px;
+		height: 30px;
+		width: 100%;
+	}
+
+	.buttons{
+		margin-top: 10px;
+		font-size: 12px;
+		background-color: #fff;
+		border: none;
+		opacity: .7;
+		height: 30%;
+		width: 35%;
+	}
+
+
+</style>

@@ -1,0 +1,189 @@
+<style>
+
+	@font-face
+	{
+		font-family: Quicksand;
+		src:url('../fonts/Quicksand-Regular.otf');
+	}
+	@font-face
+	{
+		font-family: Quicksand;
+		src:url('../fonts/Quicksand-Regular.otf');
+	}
+
+	@font-face
+	{
+		font-family: Quicksandb;
+		src:url('../fonts/Quicksand-Bold.otf');
+	}
+
+	body{
+		font-family: Quicksand;
+	}
+
+	input[type=range] {
+	    -webkit-appearance: none;
+	    background-color: #666;
+	    width: 47.5%;
+	    height: 5px;
+	    margin-top: 15px;
+	   	float: left;
+	}
+
+	input[type="range"]::-webkit-slider-thumb {
+	     -webkit-appearance: none;
+	    background-color: #2E2E2E;
+	    width: 10px;
+	    height: 20px;
+	}
+
+	input[type=text] {
+	    -webkit-appearance: none;
+	    padding-left: 16px;
+	}
+
+	.number{
+		background-color: #D47874;
+		border-radius: 30px;
+		width: 50px;
+		height: 50px;
+		color: #F4F3EC;
+		font-size: 36px;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+
+	#instructions{
+		height: 30%;
+	}
+
+	.step{
+		height: 115px;
+		width: 300px;
+		vertical-align:top;
+		display:inline-block;
+		font-size: 18px;
+		margin-top: 30px;
+	}
+
+	.panel-default{
+		position: absolute;
+		left: 36.5%;
+		height: 380px;
+		width: 27%;
+		border-radius: 10px;
+		font-family: Helvetica;
+		margin-top: 30px;
+		background-color: rgba(255,255,255,.7);
+	}
+
+	.form-control{
+		margin-top: 15px;
+		font-size: 16px;
+		color: #666 !important;
+	}
+
+	.form-control:focus,input:focus{
+		border: none !important;
+		outline: 0 !important;
+	}
+
+	#learnMore{
+		margin-right: 10px;
+		width: 150px;
+		height: 50px;
+		background-color: rgba(255,255,255,.1);
+		color: #fff;
+		border: 2px solid #fff;
+		font-size: 16px;
+	}
+
+	#learnMore:hover{
+		background-color: rgba(255,255,255,.7);
+		color: #fff;
+		border: 2px solid #fff;
+	}
+
+	#getStarted{
+		margin-right: 10px;
+		width: 150px;
+		height: 50px;
+		background-color: rgba(255,255,255,.1);
+		color: #fff;
+		border: 2px solid #fff;
+		font-size: 16px;
+	}
+
+	#getStarted:hover{
+		background-color: rgba(255,255,255,.7);
+		color: #fff;
+		border: 2px solid #fff;
+	}
+
+	#home{
+		background-image: url('../images/bg1.jpg');
+		background-size: 100% 100%;
+		background-attachment:fixed;
+		background-repeat: repeat;	
+		padding-top: 30%;
+		height: 100%;
+		text-align: center;
+		color: #fff;
+	}
+
+	#tag{
+		font-family: Quicksand;
+		width: 700px;
+		font-size: 48px;
+	}
+
+	#smallTag{
+		font-family: Quicksand;
+		width: 700px;
+		font-size: 16px;
+		font-weight: lighter;
+	}
+
+	#form{
+		background-image: url('../images/bg.jpg');
+		background-size: 100% 100%;
+		background-attachment:fixed;
+		background-repeat: repeat;	
+		height: 650px;
+	}
+
+	#name{
+		margin-right: 5%;
+		float: left !important;
+		margin-top: 10px;
+		width: 47.5%;
+	}
+
+	#ending{
+		float: left !important;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		width: 47.5%;
+	}
+
+	#remindMe{
+		color: #666 !important;
+		font-size: 20px;
+	}
+
+	#timeOutput{
+		float: left;
+		width: 47.5%;
+		margin-top: 0px;
+		margin-right: 10px;
+	}
+
+	#footer{
+		height: 45px;
+		width: 100%;
+		background-color: #0F0F0F;
+	}
+
+
+
+</style>
