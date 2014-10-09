@@ -66,11 +66,10 @@
 	.buttons{
 		padding-top:40px;
 		float: left;
-		margin: 1px;
-		
+		margin: 1px;	
 		background-color: #FFD700;
-		border: 3px solid black;
-		border-radius: 15px;
+		border: 5px solid black;
+		border-radius: 70px;
 		opacity: .7;
 		height: 27%;
 		width: 49%;
