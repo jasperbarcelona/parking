@@ -45,7 +45,7 @@
 		margin-top: 25px;
 		margin-bottom: 20px;
 		width: 95%;
-		height: 75px;
+		height: 90px;
 		bottom: 0px;
 		border-radius: 7px;
 		font-size: 35px;
@@ -68,6 +68,7 @@
 		color: black;
 		background-color: #FFD700;
 		border: 10px solid black;
+		border-radius: 15px;
 		opacity: .9;
 		height: 25%;
 		width: 44%;
