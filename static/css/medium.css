@@ -18,14 +18,14 @@
 	}
 
 	html,body{
-		font-family: Quicksand !important;
+		font-family: Quicksand;
 		text-align: center;
 		height: 100%;
 	    width: 100%;
 	    overflow: auto;
 	    background-image: url('../images/bg1.jpg');
 	    background-size: 100% 100%;
-	    background-repeat: repeat;
+	    background-repeat: no-repeat;
 	    background-attachment: fixed;
 	    -webkit-overflow-scrolling: touch; 
 	}
@@ -74,8 +74,8 @@
 		border: 10px solid black;
 		border-radius: 15px;
 		opacity: .9;
-		height: 35%;
-		width: 46%;
+		height: 33%;
+		width: 48%;
 	}
 
 
