@@ -22,7 +22,7 @@
 		background-image: url('../images/bg.jpg');
 		background-size: 100% 100%;
 		background-attachment:fixed;
-		background-repeat: repeat;
+		background-repeat: no-repeat;
 	}
 
 	#intro{
@@ -39,6 +39,7 @@
 	#searchBox{
 		margin-top: 10px;
 		width: 95%;
+		height: 50px;
 		bottom: 0px;
 		border-radius: 7px;
 	}
