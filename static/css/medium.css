@@ -31,12 +31,6 @@
 	    background-attachment: fixed; 
 	}
 
-	#wrap{
-		height: 100%;
-		width: 100%;
-
-	}
-
 	#intro{
 		position: absolute;
 		z-index: 99;
