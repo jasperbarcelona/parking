@@ -14,7 +14,7 @@
 	@font-face
 	{
 		font-family: Quicksandb;
-		src:url('../fonts/Quicksand-Regular.otf');
+		src:url('../fonts/Quicksand-Bold.otf');
 	}
 
 	html,body{
@@ -46,14 +46,11 @@
 	}
 
 	.cone{
-		margin-right: 10px;
 		height: 30px;
 	}
 
 	#brand{
-		position: absolute;
-		top: 30%;
-		left: 23%;
+		margin-top: 40%;
 	}
 
 	#search{
