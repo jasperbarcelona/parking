@@ -80,22 +80,23 @@
 		padding-top:40px;
 		float: left;
 		margin: 2.2%;	
-		background-color: #FFD700;
-		border: 5px solid black;
+		background-color: #329939;
+		border: 5px solid #fff;
 		border-radius: 10%;
 		height: 23%;
 		width: 45%;
 		min-height: 150px;
+		opacity: .9;
 	}
 
 	.name{
 		font-size: 20px;
-		color: black;
+		color: #fff;
 	}
 
 	.city{
-		font-size: 16px;
-		color: red;
+		font-size: 14px;
+		color: #fff;
 	}
 
 
