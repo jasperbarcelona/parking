@@ -45,14 +45,15 @@
 		float: left;
 		height: 60px;
 		width: 20%;
-		text-align: center;
-		padding-top: 20px;
-		font-size: 20px;
+		padding-left: 3%;
+		padding-top: 13px;
+		font-size: 30px;
 		color: #f5f5f5;
 	}
 
 	#cone{
-		height: 27px;
+		float: right;
+		height: 40px;
 	}
 
 	#headCenter{
@@ -60,15 +61,16 @@
 		height: 60px;
 		width: 60%;
 		text-align: center;
-		padding-top: 20px;
+		padding-top: 15px;
+		font-size: 26px;
 	}
 
 	#headRight{
 		float: left;
 		height: 60px;
 		width: 20%;
-		text-align: center;
-		padding-top: 18px;
+		padding-right: 3%;
+		padding-top: 10px;
 	}
 
 	#body{
