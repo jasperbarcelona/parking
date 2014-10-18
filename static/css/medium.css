@@ -108,7 +108,7 @@
 
 	.rows{
 		width: 98%;
-		height: 45px;
+		height: 50px;
 		border: 1px solid black;
 	}
 
@@ -121,7 +121,7 @@
 	}
 
 	.image{
-		height: 35px;
+		height: 48px;
 		width: 50px;
 		border-radius: 2px;
 	}
