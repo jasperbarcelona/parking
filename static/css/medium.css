@@ -24,6 +24,9 @@
 	    overflow: auto;
 	    background-color: #161616;
 	    -webkit-overflow-scrolling: touch;
+	    -moz-box-shadow:    inset 0 0 35px #000000;
+		-webkit-box-shadow: inset 0 0 35px #000000;
+		box-shadow:         inset 0 0 35px #000000;
 	}
 
 	.lighter{
@@ -36,13 +39,11 @@
 
 	#head{
 		width: 100%;
-		height: 100px;
+		height: 80px;
 		color: #f5f5f5;
 		font-size: 18px;
 		font-weight: bold;
-		-moz-box-shadow:    inset 0 0 35px #000000;
-		-webkit-box-shadow: inset 0 0 35px #000000;
-		box-shadow:         inset 0 0 35px #000000;
+		
 	}
 
 	#headLeft{
@@ -50,7 +51,7 @@
 		height: 60px;
 		width: 20%;
 		padding-left: 3%;
-		padding-top: 54px;
+		padding-top: 34px;
 		font-size: 30px;
 		color: #F5F5F5;
 	}
@@ -65,7 +66,7 @@
 		height: 60px;
 		width: 60%;
 		text-align: center;
-		padding-top: 55px;
+		padding-top: 35px;
 		font-size: 26px;
 	}
 
@@ -74,7 +75,7 @@
 		height: 60px;
 		width: 20%;
 		padding-right: 3%;
-		padding-top: 50px;
+		padding-top: 30px;
 	}
 
 	#body{
