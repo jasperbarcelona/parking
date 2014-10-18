@@ -143,5 +143,13 @@
 		font-weight: bold;
 		color: #4C4D4D;
 	}
+
+	.arrow{
+		float: right;
+		text-align: center;
+		width: 10%;
+		font-size: 18px;
+		color: #1CC4C5;
+	}
 	
 </style>
