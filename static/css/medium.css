@@ -48,7 +48,7 @@
 		padding-left: 3%;
 		padding-top: 14px;
 		font-size: 30px;
-		color: #41B9BB;
+		color: #1CC4C5;
 	}
 
 	#cone{
@@ -98,11 +98,11 @@
 		margin-left: 1%;
 		font-weight: bold;
 		color: #fff;
-		font-size: 20px;
+		font-size: 16px;
 	}
 
 	#places{
-		margin-top: 40px;
+		margin-top: 45px;
 		width: 98%;
 	}
 
@@ -131,7 +131,7 @@
 	}
 
 	.placeName{
-		color: #41B9BB;
+		color: #1CC4C5;
 		font-size: 20px;
 		font-weight: bold;
 	}
