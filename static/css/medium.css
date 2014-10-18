@@ -23,6 +23,7 @@
 	    width: 100%;
 	    overflow: auto;
 	    background-color: #161616;
+	    -webkit-overflow-scrolling: touch;
 	}
 
 	.lighter{
