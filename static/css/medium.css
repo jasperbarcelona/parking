@@ -82,9 +82,9 @@
 	}
 
 	#search{
-		margin-top: 0px;
-		width: 100%;
-		height: 40px;
+		margin-top: 15px;
+		width: 90%;
+		height: 35px;
 	}
 
 	#searchbox{
@@ -98,7 +98,7 @@
 
 	.destinations{
 		float: left;
-		margin-top: 30px;
+		margin-top: 20px;
 		margin-left: 1%;
 		font-weight: bold;
 		color: #fff;
@@ -106,7 +106,7 @@
 	}
 
 	.places{
-		margin-top: 55px;
+		margin-top: 45px;
 		width: 98%;
 	}
 
