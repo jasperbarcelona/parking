@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 $(window).load(function() {
-    $('#intro').hide();
+    $('#intro').delay(5000).fadeOut();
   });
 
 
