@@ -5,11 +5,11 @@ $('#content').delay(6000).fadeIn();
 
 
 $("#container").scroll(function () {
-    if ($("#container").scrollTop() > 0) {
-        $('#head').slideUp();
+    if ($("#container").scrollTop() > 40) {
+        $('#head').hide();
     }
     else{
-    	$('#head').slideDown();
+    	$('#head').show();
     } 
 });
 
