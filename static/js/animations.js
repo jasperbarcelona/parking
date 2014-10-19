@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
-$('#intro').delay(4000).fadeOut(1500);
-$('#content').delay(6000).fadeIn();
+$(window).load(function() {
+    $('#intro').hide();
+  });
+
 
 var height = $(window).height()-80;
 $("#container").css("height",height);
+
 
 
 $(window).resize(function(){
@@ -14,7 +17,7 @@ $(window).resize(function(){
 
 
 $(".glyphicon-align-justify").click(function(){
-	$("#navigation").toggle();
+	$("#navigation").slideToggle();
 	$(this).toggleClass("clicked unclicked");
 	$("#container").toggleClass("containerClicked containerUnclicked");
 });
