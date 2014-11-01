@@ -11,6 +11,7 @@ $("#container").css("height",height);*/
 
 $(window).scroll(function(){
 	$("#head").slideUp();
+	$("#head").css("display","none");
 	$("#search").css("position","fixed");
 	$("#search").css("left","0");
 	$("#search").css("right","0");
