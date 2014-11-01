@@ -46,7 +46,16 @@
 				<span id="toggleUp" class="glyphicon glyphicon-chevron-up"></span>
 			</div>
 			<div id="headRight">
-				<img id="cone" src="../static/images/cone.jpg">
+				{% if scheme=="dark" %}
+				<img id="cone" src="../static/images/coneDark.jpg">
+
+				{% elif scheme=="light" %}
+				<img id="cone" src="../static/images/coneLight.jpg">
+
+				{% elif scheme=="orange" %}
+				<img id="cone" src="../static/images/coneOrange.jpg">
+
+				{% endif %}
 			</div>
 		</div>
 
