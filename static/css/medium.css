@@ -142,9 +142,13 @@
 		overflow: -moz-scrollbars-none;
 	}
 
-	#cone{
-		float: right;
-		height: 34px;
+
+	#cone1{
+		position: absolute;
+		float: left;
+		margin-top: 6px;
+		height: 30px;
+		left: 11;
 	}
 
 	#parking{
@@ -154,14 +158,14 @@
 		font-size: 26px;
 		margin-left: 0;
 		margin-top: 4px;
-		left: 4%;
+		left: 14%;
 	}
 
 	#headRight{
 		float: left;
 		height: 80%;
 		width: 20%;
-		padding-right: 3%;
+		padding-right: 4%;
 		padding-top: 15px;
 	}
 
