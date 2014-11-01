@@ -201,10 +201,11 @@
 
 	.placePic{
 		width: 60px;
+		padding-left: 5px;
 	}
 
 	.placeDesc{
-		padding-left: 10px;
+		padding-left: 5px;
 	}
 
 	.image{
