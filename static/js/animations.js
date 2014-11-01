@@ -5,15 +5,15 @@ $(window).load(function() {
   });
 
 
-/*var height = $(window).height()-80;
-$("#container").css("height",height);*/
+var height = $(window).height()-80;
+$("#container").css("height",height);
 
 
 
-/*$(window).resize(function(){
+$(window).resize(function(){
 	var height = $(window).height()-80;
 	$("#container").css("height",height);
-});*/
+});
 
 
 $("#toggleDown").click(function(){
