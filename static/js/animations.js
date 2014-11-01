@@ -17,10 +17,20 @@ $(window).resize(function(){
 
 
 $("#parking").on('click', function() {
+	var $this = jQuery(this);
+        if ($this.data('activated')) return false;  // Pending, return
+
+        $this.data('activated', true);
+        setTimeout(function() {
+            $this.data('activated', false)
+        }, 500); // Freeze for 500ms
+        
 	$("#navigation").stop().slideToggle();
 	$(".toggleUnclicked").switchClass( "toggleUnclicked", "toggleClicked" );
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
 	$("#container").toggleClass("containerClicked containerUnclicked");
+	
+	return false; 
 });
 
 
