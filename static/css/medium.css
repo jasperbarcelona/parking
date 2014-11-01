@@ -27,6 +27,7 @@
 	    height: 100%;
 	}
 
+
 	.lighter{
 		background-color: #1E1E1E;
 	}
@@ -82,13 +83,14 @@
 		overflow: hidden;
 	}
 
+
 	#container{
 		-webkit-overflow-scrolling: touch;
 		position: absolute;
 		width: 100%;
 		overflow-x: hidden;
-		top: 40px;
-		z-index: 1;	
+		top: 60px;
+		z-index: 1;
 	}
 
 	#toggleUp{
@@ -174,15 +176,23 @@
 
 	.destinations{
 		float: left;
-		margin-top: 20px;
+		margin-top: 0px;
 		margin-left: 1%;
 		font-weight: bold;
 		color: #fff;
 		font-size: 16px;
 	}
 
-	.places{
+	#popular{
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+
+	#recent{
 		margin-top: 45px;
+	}
+
+	.places{
 		width: 98%;
 	}
 
@@ -206,8 +216,8 @@
 
 	.image{
 		height: 50px;
-		width: 60px;
-		border-radius: 2px;
+		width: 55px;
+		border-radius: 50%;
 	}
 
 	.placeName{
