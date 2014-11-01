@@ -5,13 +5,13 @@ $(window).load(function() {
   });
 
 
-var height = $(window).height()-80;
+var height = $(window).height()-60;
 $("#container").css("height",height);
 
 
 
 $(window).resize(function(){
-	var height = $(window).height()-80;
+	var height = $(window).height()-60;
 	$("#container").css("height",height);
 });
 
