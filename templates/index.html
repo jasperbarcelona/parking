@@ -13,6 +13,12 @@
 	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
 	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumLight.css">
 	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumLight.css">
+
+	{% elif scheme=="orange" %}
+	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
+	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumOrange.css">
+	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumOrange.css">
+
 	{% endif %}
 </head>
 
@@ -31,6 +37,10 @@
 
 				{% elif scheme=="light" %}
 				<img id="toggleDown" class="toggleUnclicked" src="../static/images/menuLight.png"><span id="parking">Parada.ph</span>
+
+				{% elif scheme=="orange" %}
+				<img id="toggleDown" class="toggleUnclicked" src="../static/images/menuOrange.png"><span id="parking">Parada.ph</span>
+
 				{% endif %}
 
 				<span id="toggleUp" class="glyphicon glyphicon-chevron-up"></span>

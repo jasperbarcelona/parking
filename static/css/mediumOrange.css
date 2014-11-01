@@ -22,7 +22,7 @@
 		height: 100%;
 	    width: 100%;
 	    overflow: auto;
-	    background-color: #161616;
+	    background-color: #F5F5F5;
 	    -webkit-overflow-scrolling: touch;
 	    height: 100%;
 	}
@@ -32,11 +32,11 @@
 	}
 
 	.lighter{
-		background-color: #1E1E1E;
+		background-color: #FEFEFE;
 	}
 
 	.darker{
-		background-color: #161616;
+		background-color: #F5F5F5;
 	}
 
 	#intro{
@@ -102,6 +102,7 @@
 		color: #f5f5f5;
 		font-size: 18px;
 		font-weight: bold;
+		background-color: #FF4E01;
 	}
 
 	#headLeft{
@@ -163,7 +164,7 @@
 		margin-top: 0px;
 		margin-left: 2%;
 		font-weight: bold;
-		color: #fff;
+		color: #787878;
 		font-size: 16px;
 	}
 
@@ -195,7 +196,7 @@
 	.rows{
 		width: 100%;
 		height: 50px;
-		border: 1px solid black;
+		border: 1px solid #C7C7C7;
 	}
 
 	.placePic{
@@ -214,7 +215,7 @@
 	}
 
 	.placeName{
-		color: #1CC4C5;
+		color: #FF4E01;
 		font-size: 20px;
 		font-weight: normal;
 	}
@@ -222,7 +223,7 @@
 	.placeAdd{
 		font-size: 16px;
 		font-weight: normal;
-		color: #EBEBEB;
+		color: #787878;
 	}
 
 	.arrow{
@@ -230,10 +231,10 @@
 		text-align: center;
 		width: 10%;
 		font-size: 20px;
-		color: #F5F5F5;
+		color: #787878;
 	}
 
-		.glyphicon-align-justify{
+	.glyphicon-align-justify{
 		font-size: 26px;
 	}
 	
