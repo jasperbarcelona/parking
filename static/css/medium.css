@@ -124,9 +124,10 @@
 	}
 
 	#toggleDown{
+		position: absolute;
 		float: left;
 		margin-top: 10px;
-		left: -10;
+		left: -8;
 	}
 
 	#container::-webkit-scrollbar{
@@ -156,11 +157,13 @@
 	}
 
 	#parking{
+		position: absolute;
 		float: left;
 		font-weight: normal;
 		font-size: 26px;
 		margin-left: 0;
 		margin-top: 4px;
+		left: 8;
 	}
 
 	#headRight{
