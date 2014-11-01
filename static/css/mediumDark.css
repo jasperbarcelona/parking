@@ -27,6 +27,9 @@
 	    height: 100%;
 	}
 
+	span:hover{
+		cursor: pointer;
+	}
 
 	.lighter{
 		background-color: #1E1E1E;
@@ -127,7 +130,6 @@
 		position: absolute;
 		float: left;
 		margin-top: 10px;
-		left: -4;
 	}
 
 	#container::-webkit-scrollbar{
@@ -195,6 +197,14 @@
 
 	.destTable{
 		width: 100%;
+	}
+
+	.toggleUnclicked{
+		left: -4;
+	}
+
+	.toggleClicked{
+		left: -10;
 	}
 
 	.rows{

@@ -16,10 +16,10 @@ $(window).resize(function(){
 });
 
 
-$("#toggleDown").click(function(){
-	$("#navigation").slideDown(1500);
-	$(this).css("display","none");
-	$("#toggleUp").show();
+$("#parking").on('click', function() {
+	$("#navigation").stop().slideToggle();
+	$(".toggleUnclicked").switchClass( "toggleUnclicked", "toggleClicked" );
+	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
 	$("#container").toggleClass("containerClicked containerUnclicked");
 });
 
