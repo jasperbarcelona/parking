@@ -5,31 +5,27 @@ $(window).load(function() {
   });
 
 
-var height = $(window).height()-80;
-$("#container").css("height",height);
+/*var height = $(window).height()-80;
+$("#container").css("height",height);*/
 
 
-$("#container").scroll(function(){
-	$("#head").slideUp(1000);
-	$("#container").animate({top:"0"});
-	$("#container").css("height","100%");
-	
-	$("#search").css("position", "fixed");
-	$("#search").animate({top: "0"});
-	$("#search").animate({width: "95%"},1000);
-	$("#search").css("left", "0");
-	$("#search").css("right", "0");
-	$("#search").css("margin-right", "auto");
-	$("#search").css("margin-left", "auto");
-	$(".places").css("margin-top", "80");
-	$(".destinations").css("margin-top", "-22");
+$(window).scroll(function(){
+	$("#head").slideUp();
+	$("#search").css("position","fixed");
+	$("#search").css("left","0");
+	$("#search").css("right","0");
+	$("#search").css("margin-left","auto");
+	$("#search").css("margin-right","auto");
+	$("#search").animate({width:"95%",top:"0"},500);
+
+
 });
 
 
-$(window).resize(function(){
+/*$(window).resize(function(){
 	var height = $(window).height()-80;
 	$("#container").css("height",height);
-});
+});*/
 
 
 $("#toggleDown").click(function(){
