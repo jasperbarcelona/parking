@@ -25,7 +25,17 @@
 <body>
 		<div id="intro" class="lighter">
 			<div id="coneIntro">
-				<img src="../static/images/cone.jpg"><br>
+				{% if scheme=="dark" %}
+				<img src="../static/images/coneDark.jpg">
+
+				{% elif scheme=="light" %}
+				<img src="../static/images/coneLight.jpg">
+
+				{% elif scheme=="orange" %}
+				<img src="../static/images/coneOrange.jpg">
+
+				{% endif %}
+				<br>
 				Welcome back, Jasper
 			</div>
 		</div>
