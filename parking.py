@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def facebook_login():
-    return flask.render_template('index.html',scheme="light")
+    return flask.render_template('index.html',scheme="orange")
 
 if __name__ == '__main__':
     app.debug = True
