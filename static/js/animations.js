@@ -14,9 +14,9 @@ $(window).resize(function(){
 });
 
 $(".rows").on('click', function() {
-	$(this).animate({"margin-left":"120%"});
-	$("#body").fadeOut("slow");
-	$("#preloader").fadeIn(2000);
+	$(this).animate({"margin-left":"120%"},800);
+	$("#body").delay(1000).fadeOut();
+	$("#preloader").delay(1200).fadeIn();
 });
 
 
