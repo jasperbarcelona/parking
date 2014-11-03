@@ -4,7 +4,6 @@ $(window).load(function() {
     $('#intro').delay(5000).fadeOut();
   });
 
-
 var height = $(window).height()-60;
 $("#container").css("height",height);
 
@@ -17,6 +16,7 @@ $(window).resize(function(){
 $(".rows").on('click', function() {
 	$(this).animate({"margin-left":"120%"});
 	$("#body").fadeOut("slow");
+	$("#preloader").fadeIn(2000);
 });
 
 

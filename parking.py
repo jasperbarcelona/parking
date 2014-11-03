@@ -9,6 +9,10 @@ app = flask.Flask(__name__)
 def facebook_login():
     return flask.render_template('index.html',scheme="light")
 
+@app.route('/nextpage', methods=['GET', 'POST'])
+def next_page():
+    return flask.render_template('nextpage.html')
+
 if __name__ == '__main__':
     app.debug = True
     app.run(port=int(os.environ['PORT']), host='0.0.0.0')
