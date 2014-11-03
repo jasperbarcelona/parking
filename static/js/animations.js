@@ -15,8 +15,8 @@ $(window).resize(function(){
 
 $(".rows").on('click', function() {
 	$(this).animate({"margin-left":"120%"},800);
-	$("#body").delay(1000).fadeOut();
-	$("#preloader").delay(1200).fadeIn();
+	$("#body").delay(800).fadeOut();
+	$("#preloader").delay(900).fadeIn();
 });
 
 
