@@ -16,7 +16,7 @@ $(window).resize(function(){
 
 $(".rows").on('click', function() {
 	$(this).animate({"margin-left":"120%"});
-	$("#container").fadeTo( "slow" , 0.2);
+	$("#body").fadeOut("slow");
 });
 
 
