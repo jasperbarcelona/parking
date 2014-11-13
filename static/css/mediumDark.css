@@ -112,7 +112,7 @@
 	}
 
 	#resultIcon{
-		font-size: 30px;
+		font-size: 40px;
 		position: relative;
   		top: 50%;
   		-moz-transform: translateY(-50%);
@@ -154,8 +154,10 @@
 		height: 30px;
 		width: 80%;
 		margin-top: 10px;
+		border: none;
 		border-radius: 5px;
 		margin-right: 4%;
+		color: #161616;
 	}
 
 	.backArrow{
