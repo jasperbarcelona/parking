@@ -6,17 +6,35 @@ $(window).load(function() {
 
 var height = $(window).height()-60;
 $("#container").css("height",height);
+$("#searchResult").css("height",height);
 
 
 $(window).resize(function(){
 	var height = $(window).height()-60;
 	$("#container").css("height",height);
+	$("#searchResult").css("height",height);
 });
 
 $(".rows").on('click', function() {
 	$(this).animate({"margin-left":"120%"},800);
 	$("#body").delay(800).fadeOut();
 	$("#preloader").delay(900).fadeIn();
+});
+
+
+$("#search").on('click', function() {
+	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
+	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
+	$("#head").animate({"left":"-100%"});
+	$("#searchHead").animate({"left":"0"});
+	$("#searchResult").animate({"top":"60px"});
+});
+
+
+$("#backSearch").on('click', function() {
+	$("#head").animate({"left":"0"});
+	$("#searchHead").animate({"left":"100%"});
+	$("#searchResult").animate({"top":"100%"});
 });
 
 
@@ -33,7 +51,6 @@ $("#parking").on('click', function() {
 	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
 	$(".toggleUnclicked").switchClass( "toggleUnclicked", "toggleClicked" );
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
-	$("#container").toggleClass("containerClicked containerUnclicked");
 
 	return false; 
 });

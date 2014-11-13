@@ -245,8 +245,7 @@
 
 	.image{
 		height: 45px;
-		width: 55px;
-		border-radius: 2px;
+		width: 100%;
 	}
 
 	.placeName{
