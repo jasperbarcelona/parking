@@ -92,7 +92,7 @@
 		color: #616161;
 		font-size: 40px;
 		text-align: center;
-		margin-top: 25px;
+		margin-top: 20px;
 	}
 
 	#container{
@@ -120,14 +120,6 @@
 		font-size: 18px;
 		font-weight: bold;
 		background-color: #1CC4C5;
-	}
-
-	.containerUnclicked{
-		left: 0;
-	}
-
-	.containerClicked{
-		left: 20%;
 	}
 
 	#headLeft{
