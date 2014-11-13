@@ -99,7 +99,6 @@
 		position: relative;
 		top: 50%;
 		transform: translateY(-55%);
-		border: 1px solid red;
 	}
 
 	#container{
