@@ -18,12 +18,14 @@
 	}
 
 	html,body{
+		position: fixed;
+		-webkit-overflow-scrolling: touch;
 		font-family: Exo;
 		height: 100%;
 	    width: 100%;
 	    overflow: hidden;
+	    overflow-x:hidden;
 	    background-color: #161616;
-	    -webkit-overflow-scrolling: touch;
 	    height: 100%;
 	}
 
