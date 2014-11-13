@@ -29,7 +29,8 @@ $("#parking").on('click', function() {
         $this.data('activated', false)
     }, 500); // Freeze for 500ms
 
-	$("#navigation").stop().slideToggle();
+	$(".navUnclicked").switchClass( "navUnclicked", "navClicked" );
+	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
 	$(".toggleUnclicked").switchClass( "toggleUnclicked", "toggleClicked" );
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
 	$("#container").toggleClass("containerClicked containerUnclicked");
