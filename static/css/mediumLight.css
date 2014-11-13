@@ -21,7 +21,7 @@
 		font-family: Exo;
 		height: 100%;
 	    width: 100%;
-	    overflow: auto;
+	    overflow: hidden;
 	    background-color: #F5F5F5;
 	    -webkit-overflow-scrolling: touch;
 	    height: 100%;
@@ -120,6 +120,14 @@
 		font-size: 18px;
 		font-weight: bold;
 		background-color: #1CC4C5;
+	}
+
+	.containerUnclicked{
+		left: 0;
+	}
+
+	.containerClicked{
+		left: 20%;
 	}
 
 	#headLeft{

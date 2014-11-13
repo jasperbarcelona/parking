@@ -31,6 +31,8 @@ $("#parking").on('click', function() {
 
 	$(".navUnclicked").switchClass( "navUnclicked", "navClicked" );
 	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
+	$(".containerUnclicked").switchClass( "containerUnclicked", "containerClicked" );
+	$(".containerClicked").switchClass( "containerClicked", "containerUnclicked" );
 	$(".toggleUnclicked").switchClass( "toggleUnclicked", "toggleClicked" );
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
 	$("#container").toggleClass("containerClicked containerUnclicked");
