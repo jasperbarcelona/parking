@@ -92,7 +92,14 @@
 		color: #616161;
 		font-size: 40px;
 		text-align: center;
-		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	#navGroup{
+		position: relative;
+		top: 50%;
+		transform: translateY(-55%);
+		border: 1px solid red;
 	}
 
 	#container{
