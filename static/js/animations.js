@@ -37,6 +37,11 @@ $("#backSearch").on('click', function() {
 	$("#searchResult").animate({"top":"100%"});
 });
 
+$("#backTheme").on('click', function() {
+	$("#head").animate({"left":"0"});
+	$("#themeHead").animate({"left":"-100%"});
+});
+
 
 $("#parking").on('click', function() {
 	var $this = jQuery(this);
@@ -47,7 +52,6 @@ $("#parking").on('click', function() {
         $this.data('activated', false)
     }, 500); // Freeze for 500ms
 
-    $(".themeClicked").delay(500).switchClass( "themeClicked", "themeUnclicked" );
 	$(".navUnclicked").switchClass( "navUnclicked", "navClicked" );
 	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
 	$(".toggleUnclicked").switchClass( "toggleUnclicked", "toggleClicked" );
@@ -58,9 +62,10 @@ $("#parking").on('click', function() {
 
 $("#changeTheme").on('click', function() {
 
-	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
-	$(".themeUnclicked").delay(500).switchClass( "themeUnclicked", "themeClicked" );
+	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
+	$("#head").animate({"left":"110%"});
+	$("#themeHead").animate({"left":"0"});
 
 	return false; 
 });
