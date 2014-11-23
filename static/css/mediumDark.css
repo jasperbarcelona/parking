@@ -93,8 +93,12 @@
 
 	.themeItem{
 		float: right;
-		width: 55px;
+		width: 17%;
 		height: 100%;
+	}
+
+	#themeDefault{
+		background-color: #161616;
 	}
 
 	#themeLight{
