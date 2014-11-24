@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def facebook_login():
-    return flask.render_template('index.html',scheme="dark")
+    return flask.render_template('index.html',scheme="light")
 
 @app.route('/nextpage', methods=['GET', 'POST'])
 def next_page():
