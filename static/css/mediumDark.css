@@ -343,7 +343,8 @@
 		float: left;
 		width: 100%;
 		font-size: 18px;
-		font-weight: normal;
+		font-weight: bold;
+		margin-top: 2px;
 	}
 
 	.placeAdd{
