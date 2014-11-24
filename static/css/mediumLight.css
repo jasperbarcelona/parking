@@ -25,6 +25,7 @@
 	    background-color: #F5F5F5;
 	    -webkit-overflow-scrolling: touch;
 	    height: 100%;
+	    font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
 	}
 
 	span:hover{
@@ -86,6 +87,37 @@
 		left: 0;
 	}
 
+	#backTheme{
+		float: left;
+		margin-top: 10px;
+	}
+
+	.themeItem{
+		float: right;
+		width: 17%;
+		height: 100%;
+	}
+
+	#themeDefault{
+		background-color: #161616;
+	}
+
+	#themeLight{
+		background-color: #1CC4C5;
+	}
+
+	#themeOrange{
+		background-color: #FF4E01;
+	}
+
+	#themeRed{
+		background-color: #D81D46;
+	}
+
+	#themeBlue{
+		background-color: #2AA9DF;
+	}
+
 	.navItem{
 		width: 90%;
 		height: 50px;
@@ -104,12 +136,43 @@
 		z-index: 1;
 	}
 
+	#searchResult{
+		-webkit-overflow-scrolling: touch;
+		position: absolute;
+		width: 100%;
+		overflow-x: hidden;
+		top: 100%;
+		z-index: 10;
+		color: #787878;
+	}
+
+	#resultIcon{
+		font-size: 40px;
+		position: relative;
+  		top: 50%;
+  		-moz-transform: translateY(-50%);
+  		-webkit-transform: translateY(-50%);
+  		-o-transform: translateY(-50%);
+  		-ms-transform: translateY(-50%);
+	}
+
 	#toggleUp{
 		display: none;
 	}
 
 	.navToggle{
 		color: #F5F5F5;	
+	}
+
+	#themeHead{
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 60px;
+		color: #f5f5f5;
+		font-size: 20px;
+		font-weight: bold;
+		background-color: #1CC4C5;
 	}
 
 	#head{
@@ -120,6 +183,33 @@
 		font-size: 18px;
 		font-weight: bold;
 		background-color: #1CC4C5;
+	}
+
+	#searchHead{
+		position: absolute;
+		padding-top: 10px;
+		left: 100%;
+		width: 100%;
+		height: 60px;
+		color: #f5f5f5;
+		font-size: 20px;
+		font-weight: bold;
+		background-color: #1CC4C5;
+	}
+
+	#searchBox{
+		float: right;
+		width: 80%;
+		margin-top: 10px;
+		border: none;
+		border-radius: 5px;
+		margin-right: 4%;
+		color: #161616;
+	}
+
+	.backArrow{
+		margin-left: 4%;
+		font-size: 35px;
 	}
 
 	#headLeft{
@@ -184,8 +274,6 @@
 	}
 
 	#body{
-		padding-left: 2%;
-		padding-right: 2%;
 		width: 100%;
 	}
 
@@ -225,52 +313,58 @@
 
 	.rows{
 		width: 100%;
-		height: 50px;
-		border-top: 1px solid #C7C7C7;
+		height: 80px;
+		border-top: 1px solid #787878;
 	}
 
 	.placePic{
-		padding-top: 2px;
 		float: left;
-		width: 60px;
-		padding-left: 2px;
+		width: 80px;
 		height: 100%;
 	}
 
 	.placeDesc{
-		padding-top: 2px;
+		padding-top: 12px;
 		float: left;
-		padding-left: 5px;
+		padding-left: 15px;
+		width: 60%;
+		height: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 
 	.image{
-		height: 45px;
-		width: 100%;
+		margin-top: 2%;
+		height: 95%;
+		width: 95%;
 	}
 
 	.placeName{
+		color: #1CC4C5;
 		text-align: left;
 		height: 22px;
 		float: left;
 		width: 100%;
-		color: #1CC4C5;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: normal;
 	}
 
 	.placeAdd{
 		float: left;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: normal;
+		margin-top: 10px;
 		color: #787878;
 	}
 
 	.arrow{
-		padding-top: 10px;
+		height: 100%;
+		padding-top: 30px;
 		float: right;
 		text-align: center;
 		width: 10%;
-		font-size: 20px;
+		font-size: 16px;
 		color: #787878;
 	}
 
