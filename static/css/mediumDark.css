@@ -275,24 +275,23 @@
 
 	.destinations{
 		float: left;
-		margin-top: 0px;
-		margin-left: 2%;
+		margin-top: 10px;
 		font-weight: bold;
-		color: #fff;
 		font-size: 16px;
+		color: #fff;
 	}
 
 	#popular{
-		margin-top: 25px;
+		margin-top: 35px;
 		margin-bottom: 20px;
 	}
 
 	#recent{
-		margin-top: 45px;
+		margin-top: 55px;
 	}
 
 	.places{
-		width: 96%;
+		width: 100%;
 	}
 
 	.destTable{
