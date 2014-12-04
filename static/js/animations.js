@@ -16,7 +16,7 @@ $(window).resize(function(){
 });
 
 $(".rows").on('click', function() {
-	$(this).animate({"margin-left":"120%"},300,'jswing');
+	$(this).animate({"margin-left":"120%"},800,'jswing');
 });
 
 
