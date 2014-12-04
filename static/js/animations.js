@@ -16,7 +16,7 @@ $(window).resize(function(){
 });
 
 $(".rows").on('click', function() {
-	$(this).animate({"margin-left":"120%"},1000,'easeInBack');
+	$(this).animate({"margin-left":"120%"},1000,'easeInSine');
 });
 
 
