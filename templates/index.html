@@ -18,8 +18,11 @@
 	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
 	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumOrange.css">
 	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumOrange.css">
-
 	{% endif %}
+
+	<script src="../static/js/jquery-1.11.0.min.js"></script>
+	<script src="../static/js/easing.js"></script>
+	<script src="../static/js/animations.js"></script>
 </head>
 
 <body>
@@ -42,11 +45,11 @@
 
 		<div id="themeHead" class="lighter">
 			<span id="backTheme" class="backArrow"><</span>
-				<div id="themeDefault" class="themeItem"></div>
-				<div id="themeRed" class="themeItem"></div>
-				<div id="themeOrange" class="themeItem"></div>	
-				<div id="themeLight" class="themeItem"></div>
-				<div id="themeBlue" class="themeItem"></div>		
+				<a href="/changetheme?scheme=dark"><div id="themeDefault" class="themeItem"></div></a>
+				<a href="/changetheme?scheme=red"><div id="themeRed" class="themeItem"></div></a>
+				<a href="/changetheme?scheme=orange"><div id="themeOrange" class="themeItem"></div></a>
+				<a href="/changetheme?scheme=light"><div id="themeLight" class="themeItem"></div></a>
+				<a href="/changetheme?scheme=blue"><div id="themeBlue" class="themeItem"></div></a>	
 		</div>
 
 		<div id="head" class="lighter">
@@ -241,9 +244,6 @@
 			<img id="preloader" src="../static/images/loading.GIF">
 		</div>
 
-
-	<script src="../static/js/jquery-1.11.0.min.js"></script>
-	<script src="../static/js/animations.js"></script>
 	<script src="../static/js/jquery-ui.js"></script>
 	<script src="../static/js/jquery-ui.min.js"></script>
 	<script src="../static/js/functions.js"></script>

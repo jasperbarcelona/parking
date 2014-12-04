@@ -1,5 +1,5 @@
 import flask, flask.views
-from flask import render_template
+from flask import render_template, request
 from flask import session, redirect
 import os
 
@@ -7,7 +7,15 @@ app = flask.Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def facebook_login():
-    return flask.render_template('index.html',scheme="light")
+    return flask.render_template('index.html',scheme="dark")
+
+
+@app.route('/changetheme', methods=['GET', 'POST'])
+def change_theme():
+    scheme = request.args.get('scheme')
+    print scheme
+    return flask.render_template('index.html',scheme=scheme)
+
 
 @app.route('/nextpage', methods=['GET', 'POST'])
 def next_page():

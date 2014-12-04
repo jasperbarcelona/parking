@@ -16,7 +16,7 @@ $(window).resize(function(){
 });
 
 $(".rows").on('click', function() {
-	$(this).animate({"margin-left":"120%"},800);
+	$(this).animate({"margin-left":"120%"},300,'jswing');
 	$("#body").delay(800).fadeOut();
 	$("#preloader").delay(900).fadeIn();
 });
@@ -26,7 +26,7 @@ $("#search").on('click', function() {
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
 	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
 	$("#head").animate({"left":"-100%"});
-	$("#searchHead").animate({"left":"0"});
+	$("#searchHead").animate({"left":"0"},300,'jswing');
 	$("#searchResult").animate({"top":"60px"});
 });
 
