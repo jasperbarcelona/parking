@@ -76,11 +76,11 @@ $(function(){
         var _cur_top = $("#container").scrollTop();
         if(_top < _cur_top)
         {
-           $("#head").animate({"top":"-60px"});
+           $("#head").animate({"top":"-60px"},300,'easeInSine');
         }
         else
         {
-            $("#head").animate({"top":"0"});
+            $("#head").animate({"top":"0"},300,'easeInSine');
         }
         _top = _cur_top;
         console.log(_direction);
