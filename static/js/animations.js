@@ -4,6 +4,7 @@ $(window).load(function() {
     $('#intro').delay(5000).fadeOut();
   });
 
+
 var height = $(window).height()-60;
 $("#container").css("height",height);
 $("#searchResult").css("height",height);
@@ -15,7 +16,7 @@ $(window).resize(function(){
 	$("#searchResult").css("height",height);
 });
 
-$(".rows").on('click', function() {
+$(".rows").on( 'touchstart', function(){
 	$(this).animate({"margin-left":"100%"},300,'easeInSine');
 });
 
