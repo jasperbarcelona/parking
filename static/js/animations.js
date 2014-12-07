@@ -16,7 +16,7 @@ $(window).resize(function(){
 	$("#searchResult").css("height",height);
 });
 
-$(".rows").on( 'touchstart', function(){
+$(".rows").on('click', function() {
 	$(this).animate({"margin-left":"100%"},300,'easeInSine');
 });
 
@@ -69,18 +69,26 @@ $("#changeTheme").on('click', function() {
 	return false; 
 });
 
-
-var iScrollPos = 0;
-$("#container").scroll(function () {
-    var iCurScrollPos = $(this).scrollTop();
-    if (iCurScrollPos > iScrollPos) {
-        $("#head").animate({"top":"-60px"});
-    } else {
-       $("#head").animate({"top":"0px"});
-    }
-    iScrollPos = iCurScrollPos;
+$(function(){
+    var _top = $("#container").scrollTop();
+    var _direction;
+    $("#container").scroll(function(){
+        var _cur_top = $("#container").scrollTop();
+        if(_top < _cur_top)
+        {
+           $("#head").animate({"top":"-60px"});
+           $("#container").animate({"top":"0px"});
+           $("#container").css("height","100%");
+        }
+        else
+        {
+            $("#head").animate({"top":"0"});
+            $("#container").animate({"top":"60px"});
+           	$("#container").css("height",height);        }
+        _top = _cur_top;
+        console.log(_direction);
+    });
 });
-
 
 
 });
