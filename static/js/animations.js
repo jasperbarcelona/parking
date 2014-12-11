@@ -20,6 +20,14 @@ $("#search").on('click', function() {
 	$("#searchHead").animate({"left":"0"},300,'jswing');
 });
 
+$("#filterSaved").on('click', function() {
+	$("#popular").animate({"margin-left":"-100%"},300,'jswing');
+	$("#saved").animate({"margin-left":"0"},300,'jswing');
+});
+
+
+
+
 
 $("#backSearch").on('click', function() {
 	$("#head").animate({"left":"0"},300,'jswing');

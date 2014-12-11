@@ -292,7 +292,14 @@
 	}
 
 	#popular{
+		position: absolute;
 		margin-top: 40px;
+	}
+
+	#saved{
+		position: absolute;
+		margin-top: 40px;
+		margin-left: 100%;
 	}
 
 	.places{
