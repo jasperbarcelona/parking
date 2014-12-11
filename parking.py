@@ -43,8 +43,8 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
-	if session:
-		return redirect('/')
+    if session:
+        return redirect('/')
     return flask.render_template('login.html',scheme="dark")
 
 
