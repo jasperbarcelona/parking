@@ -7,13 +7,10 @@ $(window).load(function() {
 
 var height = $(window).height()-60;
 $("#container").css("height",height);
-$("#searchResult").css("height",height);
-
 
 $(window).resize(function(){
 	var height = $(window).height()-60;
 	$("#container").css("height",height);
-	$("#searchResult").css("height",height);
 });
 
 $("#search").on('click', function() {
@@ -21,14 +18,12 @@ $("#search").on('click', function() {
 	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
 	$("#head").animate({"left":"-100%"},300,'jswing');
 	$("#searchHead").animate({"left":"0"},300,'jswing');
-	$("#searchResult").animate({"top":"60px"},300,'jswing');
 });
 
 
 $("#backSearch").on('click', function() {
 	$("#head").animate({"left":"0"},300,'jswing');
 	$("#searchHead").animate({"left":"100%"},300,'jswing');
-	$("#searchResult").animate({"top":"100%"},300,'jswing');
 });
 
 $("#backTheme").on('click', function() {
