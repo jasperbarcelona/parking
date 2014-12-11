@@ -75,11 +75,11 @@
 		top: 60px;
 		z-index: 90;
 		height: 100%;
-		width: 21%;
+		width: 80%;
 	}
 
 	.navUnclicked{
-		left: -21%;
+		left: -80%;
 	}
 
 	.navClicked{
@@ -117,15 +117,55 @@
 		background-color: #2AA9DF;
 	}
 
+	#profile{
+		height: 150px;
+		background-image: url('../images/city.jpg');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+	#profilePic{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		border: 3px solid #fff;
+	}
+
+	#profileLabel{
+		font-size: 20px;
+		color: #fff;
+	}
 
 	.navItem{
-		width: 90%;
+		width: 100%;
 		height: 50px;
-		color: #F5F5F5;
-		font-size: 30px;
-		text-align: center;
-		margin-top: 25px;
+		color: #F5F5F5;	
+		padding-left: 12%; 
 	}
+
+	.active{
+		background-color: #404040;
+	}
+
+	.navPic{
+		float: left;
+		margin-top: 8px;
+		font-size: 30px;
+	}
+
+	.navLabel{
+		float: left;
+		margin-top: 12px;
+		font-size: 18px;
+		margin-left: 30px;
+	}
+
+	#navGroup{
+		margin-top: 20px;
+	}
+
 
 	#container{
 		-webkit-overflow-scrolling: touch;

@@ -14,21 +14,21 @@ $(window).resize(function(){
 });
 
 $("#search").on('click', function() {
-	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
-	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
-	$("#head").animate({"left":"-100%"},300,'jswing');
-	$("#searchHead").animate({"left":"0"},300,'jswing');
+	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked", 500 );
+	$(".navClicked").switchClass( "navClicked", "navUnclicked", 500 );
+	$("#head").animate({"left":"-100%"}, 500,'jswing');
+	$("#searchHead").animate({"left":"0"}, 500,'jswing');
 });
 
 
 $("#backSearch").on('click', function() {
-	$("#head").animate({"left":"0"},300,'jswing');
-	$("#searchHead").animate({"left":"100%"},300,'jswing');
+	$("#head").animate({"left":"0"}, 500,'jswing');
+	$("#searchHead").animate({"left":"100%"}, 500,'jswing');
 });
 
 $("#backTheme").on('click', function() {
-	$("#head").animate({"left":"0"},300,'jswing');
-	$("#themeHead").animate({"left":"-100%"},300,'jswing');
+	$("#head").animate({"left":"0"}, 500,'jswing');
+	$("#themeHead").animate({"left":"-100%"}, 500,'jswing');
 });
 
 
@@ -41,10 +41,10 @@ $("#parking").on('click', function() {
         $this.data('activated', false)
     }, 500); // Freeze for 500ms
 
-	$(".navUnclicked").switchClass( "navUnclicked", "navClicked" );
-	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
-	$(".toggleUnclicked").switchClass( "toggleUnclicked", "toggleClicked" );
-	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
+	$(".navUnclicked").switchClass( "navUnclicked", "navClicked", 500 );
+	$(".navClicked").switchClass( "navClicked", "navUnclicked",500 );
+	$(".toggleUnclicked").switchClass( "toggleUnclicked", "toggleClicked", 500  );
+	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked", 500  );
 
 	return false; 
 });
