@@ -38,7 +38,7 @@ def pop_login_session():
 def index():
     if not session:
         return redirect('login')
-    return flask.render_template('index.html',scheme="dark", facebook_id=session['facebookId'])
+    return flask.render_template('index.html',scheme="dark", facebook_id=session['facebookId'], first_name=session['firstname'], last_name=session['lastname'])
 
 
 @app.route('/login', methods=['GET', 'POST'])
