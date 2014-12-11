@@ -43,6 +43,8 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
+	if session:
+		return redirect('/')
     return flask.render_template('login.html',scheme="dark")
 
 
@@ -77,7 +79,13 @@ def change_theme():
 
 @app.route('/nextpage', methods=['GET', 'POST'])
 def next_page():
-    return flask.render_template('nextpage.html')
+    return flask.render_template('nextpage.html')\
+
+
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
+    session.clear()
+    return redirect('/login')
 
 if __name__ == '__main__':
     app.debug = True
