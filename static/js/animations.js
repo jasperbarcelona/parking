@@ -16,11 +16,6 @@ $(window).resize(function(){
 	$("#searchResult").css("height",height);
 });
 
-$(".rows").on('click', function() {
-	$(this).animate({"margin-left":"100%"},300,'easeInSine');
-});
-
-
 $("#search").on('click', function() {
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
 	$(".navClicked").switchClass( "navClicked", "navUnclicked" );
