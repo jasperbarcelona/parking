@@ -26,6 +26,8 @@
 </head>
 
 <body>
+
+	
 		<div id="intro" class="lighter">
 			<div id="coneIntro">
 				{% if scheme=="dark" %}
@@ -39,9 +41,14 @@
 
 				{% endif %}
 				<br>
-				Welcome back, Jasper
+				{% if hadtolog %}
+					Logging you in. You look awesome!
+				{% elif not hadtolog %}
+					Welcome Back, {{firstname}}
+				{% endif %}
 			</div>
 		</div>
+	
 
 		<div id="themeHead" class="lighter">
 			<span id="backTheme" class="backArrow"><</span>

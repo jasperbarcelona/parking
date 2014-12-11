@@ -1,0 +1,53 @@
+<html>
+<head>
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+	{% if scheme=="dark" %}
+	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
+	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumDark.css">
+	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumDark.css">
+
+	{% elif scheme=="light" %}
+	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
+	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumLight.css">
+	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumLight.css">
+
+	{% elif scheme=="orange" %}
+	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
+	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumOrange.css">
+	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumOrange.css">
+	{% endif %}
+
+	<script src="../static/js/jquery-1.11.0.min.js"></script>
+	<script src="../static/js/easing.js"></script>
+	<script src="../static/js/animations.js"></script>
+</head>
+
+<body>
+	<div id="intro" class="lighter">
+		<div id="coneIntro">
+			{% if scheme=="dark" %}
+			<img src="../static/images/coneDark.jpg">
+
+			{% elif scheme=="light" %}
+			<img src="../static/images/coneLight.jpg">
+
+			{% elif scheme=="orange" %}
+			<img src="../static/images/coneOrange.jpg">
+
+			{% endif %}
+			<br>
+			Parada.ph
+		</div>
+	</div>
+
+	<div id="loginContainer">
+		<div id="loginForm">
+			Because we hate login forms.<br>
+			<a class="qwer" href="/facebooklogin">Login or Signup</a></li>
+		</div>
+	</div>
+</body>
+
+</html>
