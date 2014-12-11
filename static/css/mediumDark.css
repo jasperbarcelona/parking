@@ -48,20 +48,19 @@
 		right: 0;
 		margin-top: auto;
 		margin-bottom: auto;
-		top: 0;
-		bottom: 24;
+		top: 30%;
 		height: 170px;
 		width: 80%;
 		text-align: center;
 		color: #fff;
-		font-size: 48px; 
+		font-size: 72px; 
 	}
 
 	.loginBtn{
 		margin-top: 20px;
-		height: 80px !important;
+		height: 130px !important;
 		width: 100%;
-		font-size: 48px; 
+		font-size: 72px; 
 		height: 45px;
 	}
 
