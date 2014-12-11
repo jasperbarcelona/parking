@@ -54,15 +54,19 @@
 		width: 80%;
 		text-align: center;
 		color: #fff;
-		font-size: 28px; 
+		font-size: 48px; 
 	}
 
 	.loginBtn{
 		margin-top: 20px;
-		height: 50px;
+		height: 80px !important;
 		width: 100%;
-		font-size: 18px;
+		font-size: 48px; 
 		height: 45px;
+	}
+
+	#coneLogin{
+		height: 170px;
 	}
 
 	.lighter{
