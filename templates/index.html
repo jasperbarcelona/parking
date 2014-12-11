@@ -26,30 +26,6 @@
 </head>
 
 <body>
-
-	
-		<div id="intro" class="lighter">
-			<div id="coneIntro">
-				{% if scheme=="dark" %}
-				<img src="../static/images/coneDark.jpg">
-
-				{% elif scheme=="light" %}
-				<img src="../static/images/coneLight.jpg">
-
-				{% elif scheme=="orange" %}
-				<img src="../static/images/coneOrange.jpg">
-
-				{% endif %}
-				<br>
-				{% if hadtolog %}
-					Logging you in. You look awesome!
-				{% elif not hadtolog %}
-					Welcome Back, {{firstname}}
-				{% endif %}
-			</div>
-		</div>
-	
-
 		<div id="themeHead" class="lighter">
 			<span id="backTheme" class="backArrow"><</span>
 				<a href="/changetheme?scheme=dark"><div id="themeDefault" class="themeItem"></div></a>
