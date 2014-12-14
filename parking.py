@@ -9,6 +9,7 @@ from flask.ext.admin import Admin, BaseView, expose
 from flask import render_template, request
 from flask import session, redirect
 from flask_oauth import OAuth
+import time
 import os
 
 app = flask.Flask(__name__)
@@ -114,6 +115,21 @@ def next_page():
 def logout():
     session.clear()
     return redirect('/login')
+
+
+@app.route('/db/rebuild', methods=['GET', 'POST'])
+def db_rebuild():
+    db.drop_all()
+    db.create_all()
+    register = User(facebook_id=123456, first_name='Mang',
+    last_name='Kanor', join_date=time.strftime('%b %d, %H:%S %p'))
+    db.session.add(register)
+    db.session.commit()
+    return 'ok'
+
+
+
+    
 
 
 if __name__ == '__main__':
