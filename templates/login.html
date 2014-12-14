@@ -47,9 +47,36 @@
 			<img id="coneLogin" src="../static/images/coneDark.jpg"><br>
 			Because we hate login forms.<br>
 			<a href="/facebooklogin"><button id="facebook" type="button" class="loginBtn btn btn-primary">Sign In with Facebook</button></a>
-			<a href="/googlrlogin"><button id="google" type="button" class="loginBtn btn btn-danger">Sign In with Google</button></a>	
+			<a href="/googlrlogin"><button id="authorize-button" type="button" onclick="handleAuthClick()" class="loginBtn btn btn-danger">Sign In with Google</button></a>	
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		var clientId='898479168208-5l5ajd331j1tlkns7vkddt8pmbv9pv9i.apps.googleusercontent.com';
+		var clientSecret='tGBq_rirvOiq0AuY1H_0eBV0';
+		var scopes='https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email'
+
+		function handleAuthClick(event){
+			gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, makeApiCall());
+			return false;
+		}
+
+		function logResponse(resp){
+			console.log(resp);
+		}
+
+		function makeApiCall(){
+			gapi.client.load('oauth2', 'v2', function(){
+				var request = gapi.client.oauth2.userinfo.get();
+
+				request.execute(function(logResponse){
+					alert(logResponse.email);
+				});
+			});
+		}
+	</script>
+
+	<script src="https://apis.google.com/js/client.js"></script>
 </body>
 
 </html>
