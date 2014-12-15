@@ -107,7 +107,7 @@ def change_theme():
 
 
 @app.route('/googlelogin', methods=['GET', 'POST'])
-def change_theme():
+def google_login():
     email = flask.request.form.get('email')
     return flask.render_template('posttest.html',email=email)
 
@@ -132,10 +132,6 @@ def db_rebuild():
     db.session.add(register)
     db.session.commit()
     return 'ok'
-
-
-
-    
 
 
 if __name__ == '__main__':
