@@ -57,7 +57,6 @@
 		var scopes='https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email'
 
 		function handleAuthClick(event){
-			gapi.client.setApiKey(apiKey);
 			gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, makeApiCall());
 			return false;
 		}
@@ -67,7 +66,7 @@
 		}
 
 		function makeApiCall(){
-			gapi.client.load('oauth2', 'v2', function(){
+			gapi.client.load('oauth2', 'v2', developerKey=api_key, function(){
 				var request = gapi.client.oauth2.userinfo.get();
 
 				request.execute(function(logResponse){
