@@ -54,7 +54,7 @@
 	<script type="text/javascript">
 		var clientId='898479168208-5l5ajd331j1tlkns7vkddt8pmbv9pv9i.apps.googleusercontent.com';
 		var clientSecret='tGBq_rirvOiq0AuY1H_0eBV0';
-		var scopes='https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email'
+		var scopes='https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email'
 
 		function handleAuthClick(event){
 			gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, makeApiCall());
