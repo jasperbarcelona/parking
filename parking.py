@@ -106,6 +106,12 @@ def change_theme():
     return flask.render_template('index.html',scheme=scheme)
 
 
+@app.route('/googlelogin', methods=['GET', 'POST'])
+def change_theme():
+    email = flask.request.form.get('email')
+    return flask.render_template('posttest.html',email=email)
+
+
 @app.route('/nextpage', methods=['GET', 'POST'])
 def next_page():
     return flask.render_template('nextpage.html')\
