@@ -83,9 +83,9 @@
 				});
 
 				request.execute(function(logResponse){
-					alert(logResponse.email);
+					alert(logResponse.image);
 					$('<form action="/googlelogin" method="POST">' + 
-    				'<input type="hidden" name="name" value="' + logResponse.email + '">' +
+    				'<input type="hidden" name="name" value="' + logResponse.image + '">' +
     				'</form>').submit();
 				});
 			});
