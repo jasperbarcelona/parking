@@ -72,7 +72,20 @@
 				request.execute(function(logResponse){
 					alert(logResponse.email);
 					$('<form action="/googlelogin" method="POST">' + 
-    				'<input type="hidden" name="email" value="' + logResponse.name + '">' +
+    				'<input type="hidden" name="email" value="' + logResponse.email + '">' +
+    				'</form>').submit();
+				});
+			});
+
+			gapi.client.load('people', 'v1', function(){
+				var request = gapi.client.plus.people.get({
+					'userId': 'me'
+				});
+
+				request.execute(function(logResponse){
+					alert(logResponse.email);
+					$('<form action="/googlelogin" method="POST">' + 
+    				'<input type="hidden" name="name" value="' + logResponse.displayName + '">' +
     				'</form>').submit();
 				});
 			});
