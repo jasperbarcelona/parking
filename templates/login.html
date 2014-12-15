@@ -53,10 +53,11 @@
 
 	<script type="text/javascript">
 		var clientId='898479168208-5l5ajd331j1tlkns7vkddt8pmbv9pv9i.apps.googleusercontent.com';
-		var clientSecret='tGBq_rirvOiq0AuY1H_0eBV0';
+		var apiKey='AIzaSyDJaDGiNxI8ATRp1KZHqIXuCw2FAaeOdfs';
 		var scopes='https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email'
 
 		function handleAuthClick(event){
+			gapi.client.setApiKey(apiKey);
 			gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, makeApiCall());
 			return false;
 		}
@@ -71,9 +72,9 @@
 
 				request.execute(function(logResponse){
 					alert(logResponse.email);
-					$('<form action="/googlelogin" method="POST">' + 
+					/*$('<form action="/googlelogin" method="POST">' + 
     				'<input type="hidden" name="email" value="' + logResponse.email + '">' +
-    				'</form>').submit();
+    				'</form>').submit();*/
 				});
 			});
 		}
