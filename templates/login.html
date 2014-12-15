@@ -66,17 +66,12 @@
 		}
 
 		function makeApiCall(){
-			gapi.client.setApiKey(apiKey);
-			gapi.client.load('oauth2', 'v2', function(){
-				var request = gapi.client.oauth2.userinfo.get();
-
-				request.execute(function(logResponse){
-					alert(logResponse.email);
-					/*$('<form action="/googlelogin" method="POST">' + 
-    				'<input type="hidden" name="email" value="' + logResponse.email + '">' +
-    				'</form>').submit();*/
-				});
-			});
+			accessToken = GoogleAuthUtil.getToken(
+                                getApplicationContext(),
+                                mPlusClient.getAccountName(), "oauth2:"
+                                        + Scopes.PLUS_LOGIN + " "
+                                        + Scopes.PLUS_PROFILE+" https://www.googleapis.com/auth/plus.profile.emails.read");
+			alert(accessToken)
 		}
 	</script>
 
