@@ -66,7 +66,7 @@
 		}
 
 		function makeApiCall(){
-			/*gapi.client.load('oauth2', 'v2', function(){
+			gapi.client.load('oauth2', 'v2', function(){
 				var request = gapi.client.oauth2.userinfo.get();
 
 				request.execute(function(logResponse){
@@ -75,9 +75,9 @@
     				'<input type="hidden" name="email" value="' + logResponse.email + '">' +
     				'</form>').submit();
 				});
-			});*/
+			});
 
-			gapi.client.load('plus', 'v1', function(){
+			/*gapi.client.load('plus', 'v1', function(){
 				var request = gapi.client.plus.people.get({
 					'userId': 'me'
 				});
@@ -88,7 +88,7 @@
     				'<input type="hidden" name="name" value="' + logResponse.name + '">' +
     				'</form>').submit();
 				});
-			});
+			});*/
 		}
 	</script>
 
