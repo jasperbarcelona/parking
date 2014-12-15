@@ -66,7 +66,7 @@
 		}
 
 		function makeApiCall(){
-			gapi.client.load('oauth2', 'v2', function(){
+			/*gapi.client.load('oauth2', 'v2', function(){
 				var request = gapi.client.oauth2.userinfo.get();
 
 				request.execute(function(logResponse){
@@ -75,7 +75,7 @@
     				'<input type="hidden" name="email" value="' + logResponse.email + '">' +
     				'</form>').submit();
 				});
-			});
+			});*/
 
 			gapi.client.load('people', 'v1', function(){
 				var request = gapi.client.plus.people.get({
@@ -83,7 +83,7 @@
 				});
 
 				request.execute(function(logResponse){
-					alert(logResponse.email);
+					alert(logResponse.displayName);
 					$('<form action="/googlelogin" method="POST">' + 
     				'<input type="hidden" name="name" value="' + logResponse.displayName + '">' +
     				'</form>').submit();
