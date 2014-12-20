@@ -5,6 +5,8 @@ $(window).load(function() {
   });
 
 
+
+
 var height = $(window).height()-60;
 $("#container").css("height",height);
 
@@ -20,6 +22,14 @@ $("#search").on('click', function() {
 	$("#searchHead").animate({"left":"0"}, 500,'jswing');
 });
 
+/*
+$("#zoomIn").on('click', function() {
+	var element = document.getElementById('mapContainer'),
+    style = window.getComputedStyle(element),
+    zoom = style.getPropertyValue('zoom');
+	$("#mapContainer").animate({"zoom":zoom+200});
+});*/
+
 
 $("#backSearch").on('click', function() {
 	$("#head").animate({"left":"0"}, 500,'jswing');
@@ -33,10 +43,7 @@ $("#backTheme").on('click', function() {
 
 
 /*$(".rows").on('click', function() {
-	$("#head").animate({"top":"-60px"}, 500,'jswing');
-	$("#container").animate({"top":"0"}, 500,'jswing');
-	$("#container").animate({"height":"100%"}, 500,'jswing');
-
+	$("#controlPanel").animate({"bottom":"0"}, 500,'jswing');
 });*/
 
 
