@@ -446,7 +446,7 @@
 		font-size: 26px;
 	}
 
-	.mapContainer{
+	#mapContainer{
 		height: 100%;
 		width: 100%;
 		overflow: auto;

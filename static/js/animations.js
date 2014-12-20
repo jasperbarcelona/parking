@@ -22,13 +22,12 @@ $("#search").on('click', function() {
 	$("#searchHead").animate({"left":"0"}, 500,'jswing');
 });
 
-/*
+
 $("#zoomIn").on('click', function() {
-	var element = document.getElementById('mapContainer'),
-    style = window.getComputedStyle(element),
+    style = window.getComputedStyle(document.getElementById('mapContainer')),
     zoom = style.getPropertyValue('zoom');
-	$("#mapContainer").animate({"zoom":zoom+200});
-});*/
+	$("#mapContainer").animate({"zoom":"45%"},500);
+});
 
 
 $("#backSearch").on('click', function() {
@@ -42,9 +41,9 @@ $("#backTheme").on('click', function() {
 });
 
 
-/*$(".rows").on('click', function() {
+$(".rows").on('click', function() {
 	$("#controlPanel").animate({"bottom":"0"}, 500,'jswing');
-});*/
+});
 
 
 $("#parking").on('click', function() {
