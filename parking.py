@@ -38,6 +38,12 @@ facebook = oauth.remote_app('facebook',
     request_token_params={'scope': ('email, ')}
 )
 
+class IngAdmin(sqla.ModelView):
+    column_display_pk = True
+admin = Admin(app)
+admin.add_view(IngAdmin(User, db.session))
+
+
 @facebook.tokengetter
 def get_facebook_token():
     return session.get('facebook_token')
@@ -91,12 +97,6 @@ def facebook_authorized(resp):
             db.session.add(register)
             db.session.commit()
     return redirect(next_url)
-
-
-class IngAdmin(sqla.ModelView):
-    column_display_pk = True
-admin = Admin(app)
-admin.add_view(IngAdmin(User, db.session))
 
 
 @app.route('/changetheme', methods=['GET', 'POST'])
