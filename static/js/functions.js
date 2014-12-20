@@ -1,10 +1,10 @@
-function channel_click(){
+function map(page){
 
-setTimeout(function nextpage(){
-$.post('/nextpage',
+
+var page = page;
+$.post('/map',{page:page},
 function(data){
 $('#container').html(data);
 });
-},2000)
-
 }
+

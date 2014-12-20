@@ -28,6 +28,13 @@ class User(db.Model):
     last_name = db.Column(db.String(64))
     join_date = db.Column(db.String(64))
 
+class Destination(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64))
+    city = db.Column(db.String(64))
+    image = db.Column(db.String(64))
+    page = db.Column(db.String(64))
+
 facebook = oauth.remote_app('facebook',
     base_url='https://graph.facebook.com/',
     request_token_url=None,
@@ -42,6 +49,7 @@ class IngAdmin(sqla.ModelView):
     column_display_pk = True
 admin = Admin(app)
 admin.add_view(IngAdmin(User, db.session))
+admin.add_view(IngAdmin(Destination, db.session))
 
 
 @facebook.tokengetter
@@ -56,11 +64,12 @@ def pop_login_session():
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if not session:
-        return redirect('login')
-    return flask.render_template('index.html',scheme="dark", facebook_id=session['facebookId'], first_name=session['firstname'], last_name=session['lastname'])
+    # if not session:
+    #     return redirect('login')
+    destinations = Destination.query.all()
+    return flask.render_template('index.html',scheme="dark", dest=destinations)
 
-
+# , facebook_id=session['facebookId'], first_name=session['firstname'], last_name=session['lastname']
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
     if session:
@@ -112,9 +121,10 @@ def google_login():
     return flask.render_template('posttest.html',email=email)
 
 
-@app.route('/nextpage', methods=['GET', 'POST'])
-def next_page():
-    return flask.render_template('nextpage.html')\
+@app.route('/map', methods=['GET', 'POST'])
+def map():
+    page = flask.request.form.get('page')+'.html'
+    return flask.render_template(page, scheme='dark')
 
 
 @app.route('/logout', methods=['GET', 'POST'])
@@ -129,7 +139,29 @@ def db_rebuild():
     db.create_all()
     register = User(facebook_id=123456, first_name='Mang',
     last_name='Kanor', join_date=time.strftime('%b %d, %H:%S %p'))
+
+    dest = Destination(name="Glorietta", city="Makati City", 
+    image="../static/images/glorietta.jpg", page="feu")
+
+    dest1 = Destination(name="Greenbelt", city="Makati City", 
+    image="../static/images/greenbelt.jpg", page="greenbelt")
+
+    dest2 = Destination(name="Resorts World Manila", city="Pasay City", 
+    image="../static/images/rwb.jpg", page="rwb")
+
+    dest3 = Destination(name="Robinsons Magnolia", city="Quezon City", 
+    image="../static/images/magnolia.jpg", page="magnolia")
+
+    dest4 = Destination(name="Robinsons Galeria", city="Quezon City", 
+    image="../static/images/gale.jpg", page="gale")
+
+
     db.session.add(register)
+    db.session.add(dest)
+    db.session.add(dest1)
+    db.session.add(dest2)
+    db.session.add(dest3)
+    db.session.add(dest4)
     db.session.commit()
     return 'ok'
 

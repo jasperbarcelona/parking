@@ -70,8 +70,9 @@
 		<div id="navigation" class="darker navUnclicked">
 			<center>
 				<div id="profile">
-					<img id="profilePic" src="https://graph.facebook.com/{{facebook_id}}/picture?type=large"><br>
-					<span id="profileLabel">{{first_name}} {{last_name}}</span><br>
+					<img id="profilePic" src=""><br>
+					<!-- <img id="profilePic" src="https://graph.facebook.com/{{facebook_id}}/picture?type=large"><br> -->
+					<span id="profileLabel"><!-- {{first_name}} {{last_name}} -->Jasper Barcelona</span><br>
 				</div>
 			</center>
 				<div id="navGroup">					
@@ -143,74 +144,23 @@
 						</div>
 					</div>	
 
-					<span class="destinations">ALL DESTINATIONS</span>
+					<span class="destinations">ALL DESTINATIONS</span>		
 					<div id="all" class="lighter places">
-						<div class="rows">
-							<div class="placePic">
-								<img class="image" src="../static/images/glorietta.jpg">
+						{% for a in dest %}
+							<div id="{{a.page}}" class="rows" onclick="map(this.id)">
+								<div class="placePic">
+									<img class="image" src="{{a.image}}">
+								</div>
+								<div class="placeDesc">
+									<span class="placeName">{{a.name}}</span>
+									<span class="placeAdd">{{a.city}}</span>
+								</div>
+								<div class="arrow">
+									<span>></span>
+								</div>
 							</div>
-							<div class="placeDesc">
-								<span class="placeName">Glorietta</span>
-								<span class="placeAdd">Makati City</span>
-							</div>
-							<div class="arrow">
-								<span>></span>
-							</div>
-						</div>
-
-						<div class="rows">
-							<div class="placePic">
-								<img class="image" src="../static/images/greenbelt.jpg">
-							</div>
-							<div class="placeDesc">
-								<span class="placeName">Greenbelt</span>
-								<span class="placeAdd">Makati City</span>
-							</div>
-							<div class="arrow">
-								<span>></span>
-							</div>
-						</div>
-
-						<div class="rows">
-							<div class="placePic">
-								<img class="image" src="../static/images/rwb.jpg">
-							</div>
-							<div class="placeDesc">
-								<span class="placeName">Resorts World Manila</span><br>
-								<span class="placeAdd">Pasay City</span>
-							</div>
-							<div class="arrow">
-								<span>></span>
-							</div>
-						</div>
-
-						<div class="rows" onclick="channel_click()">
-							<div class="placePic">
-								<img class="image" src="../static/images/magnolia.jpg">
-							</div>
-							<div class="placeDesc">
-								<span class="placeName">Robinsons Magnolia</span><br>
-								<span class="placeAdd">Quezon City</span>
-							</div>
-							<div class="arrow">
-								<span>></span>
-							</div>
-						</div>
-
-						<div class="rows">
-							<div class="placePic">
-								<img class="image" src="../static/images/gale.jpg">
-							</div>
-							<div class="placeDesc">
-								<span class="placeName">Robinsons Galeria</span>
-								<span class="placeAdd">Quezon City</span>
-							</div>
-							<div class="arrow">
-								<span>></span>
-							</div>
-						</div>
-
-					</div>		
+						{% endfor %}
+					</div>			
 				</center>
 				<br><br>
 			</div>

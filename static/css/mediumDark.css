@@ -445,5 +445,139 @@
 	.glyphicon-align-justify{
 		font-size: 26px;
 	}
+
+	.mapContainer{
+		height: 100%;
+		width: 100%;
+		overflow: auto;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	#feuMap{
+		width: 1500px;
+	}
+	
+	#feuBldg{
+		left: 200px;
+		height:525px;
+		width: 975px;
+		background-color: #1E1E1E;
+	}
+
+	#feuLeft{
+		float: left;
+		width: 150px;
+		height: 645px;
+		margin-right: 100px;
+		border-left: 8px solid #1E1E1E;
+		border-bottom: 8px solid #1E1E1E;
+	}
+
+	#feuMid{
+		display: inline;
+		float: left;
+		height: 645px;
+		margin-bottom: 50px;
+		border-left: 8px solid #1E1E1E;
+		border-right: 8px solid #1E1E1E;
+	}
+
+	#feuRight{
+		float: left;
+		width: 150px;
+		height: 645px;
+		margin-left: 100px;
+		border-right: 8px solid #1E1E1E;
+		border-bottom: 8px solid #1E1E1E;
+	}
+
+	.feuSlotsLeft{
+		height: 75px;
+		width: 120px;
+		border-top: 2px solid #1CC4C5;
+		border-bottom: 2px solid #1CC4C5;
+	}
+
+	.feuStopperLeft{
+		margin-top: 5px;
+		height: 61px;
+		width: 10px;
+	}
+
+	.innerLeftYellow{
+		height: 20%;
+		background-color: yellow;
+	}
+
+	.innerLeftBlack{
+		height: 20%;
+		background-color: black;
+	}
+
+	.feuSlotsBottom{
+		float: left;
+		height: 110px;
+		width: 75px;
+		border-left: 2px solid #1CC4C5;
+		border-right: 2px solid #1CC4C5;
+	}
+
+	.feuStopperBottom{
+		margin-left: 5px;
+		width: 61px;
+		height: 10px;
+	}
+
+	.innerBottomYellow{
+		float: left;
+		width: 20%;
+		background-color: yellow;
+		height: 10px;
+	}
+
+	.innerBottomBlack{
+		float: left;
+		width: 20%;
+		background-color: black;
+		height: 10px;
+	}
+
+	.feuSlotsRight{
+		height: 75px;
+		width: 120px;
+		border-top: 2px solid #1CC4C5;
+		border-bottom: 2px solid #1CC4C5;
+	}
+
+	.lastTop{
+		height: 69px !important;
+		border-top: none !important;
+	}
+
+	.lastBottom{
+		border-bottom: none !important;
+	}
+
+	.lastLeft{
+		width: 73px !important;
+		border-left: none !important;
+	}
+
+	.lastRight{
+		border-right: none !important;
+	}
+
+	.mapContainer::-webkit-scrollbar{
+		width: 0 !important
+	}
+
+	.mapContainer{
+		-ms-overflow-style: none;
+	}
+
+	.mapContainer{
+		overflow: -moz-scrollbars-none;
+	}
 	
 </style>
