@@ -32,12 +32,12 @@ $("#backTheme").on('click', function() {
 });
 
 
-$(".rows").on('click', function() {
+/*$(".rows").on('click', function() {
 	$("#head").animate({"top":"-60px"}, 500,'jswing');
 	$("#container").animate({"top":"0"}, 500,'jswing');
 	$("#container").animate({"height":"100%"}, 500,'jswing');
 
-});
+});*/
 
 
 $("#parking").on('click', function() {

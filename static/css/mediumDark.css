@@ -451,6 +451,7 @@
 		width: 100%;
 		overflow: auto;
 		overflow-x: auto;
+		zoom: 50%;
 		-webkit-overflow-scrolling: touch;
 	}
 
