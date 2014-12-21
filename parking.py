@@ -139,8 +139,16 @@ def map():
 
 @app.route('/count', methods=['GET', 'POST'])
 def get_count():
-    available = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
-    return flask.render_template('available.html', available=available)
+    session['available'] = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
+    return flask.render_template('available.html', available=session['available'])
+
+
+@app.route('/refresh', methods=['GET', 'POST'])
+def refresh_page():
+    if not session['available'] == Slot.query.filter_by(destination=session['page'], level=1, status=0).count():
+        slots = Slot.query.filter_by(destination=session['page'], level=1).all()
+        return flask.render_template(session['page']+'.html', slots=slots)
+    return ('',204)
 
 
 @app.route('/logout', methods=['GET', 'POST'])

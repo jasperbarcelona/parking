@@ -1,23 +1,19 @@
 $(document).ready(function(){
 
-
-
 $(window).load(function() {
     $('#intro').delay(5000).fadeOut();
   });
-
-
 
 
 var height = $(window).height()-60;
 $("#container").css("height",height);
 
 
-
 $(window).resize(function(){
 	var height = $(window).height()-60;
 	$("#container").css("height",height);
 });
+
 
 $("#search").on('click', function() {
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked", 500 );
@@ -37,6 +33,7 @@ $("#zoomIn").on('click', function() {
     }
 });
 
+
 $("#zoomOut").on('click', function() {
 	var element = document.getElementById('mapContainer'),
     style = window.getComputedStyle(element),
@@ -53,6 +50,7 @@ $("#backSearch").on('click', function() {
 	$("#searchHead").animate({"left":"100%"}, 500,'jswing');
 });
 
+
 $("#backTheme").on('click', function() {
 	$("#head").animate({"left":"0"}, 500,'jswing');
 	$("#themeHead").animate({"left":"-100%"}, 500,'jswing');
@@ -61,6 +59,12 @@ $("#backTheme").on('click', function() {
 
 $(".rows").on('click', function() {
 	$("#controlPanel").animate({"bottom":"0"},500,'jswing');
+	setInterval(function refresh(){
+	$.post('/refresh',
+	function(data){
+	$('#container').html(data);
+	});
+	},5000);
 });
 
 
@@ -81,6 +85,7 @@ $("#parking").on('click', function() {
 	return false; 
 });
 
+
 $("#changeTheme").on('click', function() {
 
 	$(".toggleClicked").switchClass( "toggleClicked", "toggleUnclicked" );
@@ -90,6 +95,5 @@ $("#changeTheme").on('click', function() {
 
 	return false; 
 });
-
 
 });

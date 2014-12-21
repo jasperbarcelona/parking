@@ -11,4 +11,4 @@ $.post('/count',
 function(data){
 $('#controlLeft').html(data);
 });
-},5000);
+},2000);
