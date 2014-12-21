@@ -75,6 +75,7 @@ def pop_login_session():
 def index():
     # if not session:
     #     return redirect('login')
+    session['changed'] = False
     destinations = Destination.query.all()
     return flask.render_template('index.html',scheme="dark", dest=destinations)
 
@@ -144,11 +145,22 @@ def get_count():
 
 
 @app.route('/refresh', methods=['GET', 'POST'])
-def refresh_page():
+def refresh_map():
     if not session['available'] == Slot.query.filter_by(destination=session['page'], level=1, status=0).count():
         slots = Slot.query.filter_by(destination=session['page'], level=1).all()
+        session['available'] = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
+        session['changed'] = True
         return flask.render_template(session['page']+'.html', slots=slots)
     return ('',204)
+
+
+@app.route('/refreshcount', methods=['GET', 'POST'])
+def refresh_count():
+    if session['changed'] == True:
+        return flask.render_template('available.html', available=session['available'])
+        session['changed'] = False
+    return ('',204)
+
 
 
 @app.route('/logout', methods=['GET', 'POST'])

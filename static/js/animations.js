@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+var $loading = $('#loading').hide();
+$(document)
+  .ajaxStart(function () {
+    $loading.show();
+  })
+  .ajaxStop(function () {
+    $loading.hide();
+  });
+
 $(window).load(function() {
     $('#intro').delay(5000).fadeOut();
   });
@@ -65,6 +74,13 @@ $(".rows").on('click', function() {
 	$('#container').html(data);
 	});
 	},5000);
+
+	setInterval(function refresh(){
+	$.post('/refreshcount',
+	function(data){
+	$('#controlLeft').html(data);
+	});
+	},6000);
 });
 
 
