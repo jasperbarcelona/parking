@@ -4,12 +4,11 @@ $.post('/map',{page:page},
 function(data){
 $('#container').html(data);
 });
-getCount();
 }
 
-function getCount(page){
+setTimeout(function getCount(page){
 $.post('/count',
 function(data){
 $('#controlLeft').html(data);
 });
-}
+},5000);

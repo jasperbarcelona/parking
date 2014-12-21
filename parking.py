@@ -134,8 +134,7 @@ def google_login():
 def map():
     session['page'] = flask.request.form.get('page')
     slots = Slot.query.filter_by(destination=session['page'], level=1).all()
-    available = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
-    return flask.render_template(session['page']+'.html', slots=slots, available=available)
+    return flask.render_template(session['page']+'.html', slots=slots)
 
 
 @app.route('/count', methods=['GET', 'POST'])
