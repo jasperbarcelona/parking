@@ -35,6 +35,21 @@ class Destination(db.Model):
     image = db.Column(db.String(64))
     page = db.Column(db.String(64))
 
+class Slot(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    number = db.Column(db.String(64))
+    destination = db.Column(db.String(64))
+    level = db.Column(db.Integer)
+    status = db.Column(db.Integer)
+
+class IngAdmin(sqla.ModelView):
+    column_display_pk = True
+admin = Admin(app)
+admin.add_view(IngAdmin(User, db.session))
+admin.add_view(IngAdmin(Destination, db.session))
+admin.add_view(IngAdmin(Slot, db.session))
+
+
 facebook = oauth.remote_app('facebook',
     base_url='https://graph.facebook.com/',
     request_token_url=None,
@@ -44,12 +59,6 @@ facebook = oauth.remote_app('facebook',
     consumer_secret=FACEBOOK_APP_SECRET,
     request_token_params={'scope': ('email, ')}
 )
-
-class IngAdmin(sqla.ModelView):
-    column_display_pk = True
-admin = Admin(app)
-admin.add_view(IngAdmin(User, db.session))
-admin.add_view(IngAdmin(Destination, db.session))
 
 
 @facebook.tokengetter
@@ -123,8 +132,16 @@ def google_login():
 
 @app.route('/map', methods=['GET', 'POST'])
 def map():
-    page = flask.request.form.get('page')+'.html'
-    return flask.render_template(page, scheme='dark')
+    session['page'] = flask.request.form.get('page')
+    slots = Slot.query.filter_by(destination=session['page'], level=1).all()
+    available = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
+    return flask.render_template(session['page']+'.html', slots=slots, available=available)
+
+
+@app.route('/count', methods=['GET', 'POST'])
+def get_count():
+    available = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
+    return flask.render_template('available.html', available=available)
 
 
 @app.route('/logout', methods=['GET', 'POST'])
@@ -155,6 +172,62 @@ def db_rebuild():
     dest4 = Destination(name="Robinsons Galeria", city="Quezon City", 
     image="../static/images/gale.jpg", page="gale")
 
+    slot = Slot(number="mkt l-1", destination="feu", level=1, status=0)
+
+    slot1 = Slot(number="mkt l-2", destination="feu", level=1, status=0)
+
+    slot2 = Slot(number="mkt l-3", destination="feu", level=1, status=0)
+
+    slot3 = Slot(number="mkt l-4", destination="feu", level=1, status=0)
+
+    slot4 = Slot(number="mkt l-5", destination="feu", level=1, status=0)
+
+    slot5 = Slot(number="mkt l-6", destination="feu", level=1, status=0)
+
+    slot6 = Slot(number="mkt l-7", destination="feu", level=1, status=0)
+
+    slot7 = Slot(number="mkt l-8", destination="feu", level=1, status=0)
+
+    slot8 = Slot(number="mkt m-1", destination="feu", level=1, status=0)
+
+    slot9 = Slot(number="mkt m-2", destination="feu", level=1, status=0)
+
+    slot10 = Slot(number="mkt m-3", destination="feu", level=1, status=0)
+
+    slot11 = Slot(number="mkt m-4", destination="feu", level=1, status=0)
+
+    slot12 = Slot(number="mkt m-5", destination="feu", level=1, status=0)
+
+    slot13 = Slot(number="mkt m-6", destination="feu", level=1, status=0)
+
+    slot14 = Slot(number="mkt m-7", destination="feu", level=1, status=0)
+
+    slot15 = Slot(number="mkt m-8", destination="feu", level=1, status=0)
+
+    slot16 = Slot(number="mkt m-9", destination="feu", level=1, status=0)
+
+    slot17 = Slot(number="mkt m-10", destination="feu", level=1, status=0)
+
+    slot18 = Slot(number="mkt m-11", destination="feu", level=1, status=0)
+
+    slot19 = Slot(number="mkt m-12", destination="feu", level=1, status=0)
+
+    slot20 = Slot(number="mkt m-13", destination="feu", level=1, status=0)
+
+    slot21 = Slot(number="mkt r-1", destination="feu", level=1, status=0)
+
+    slot22 = Slot(number="mkt r-2", destination="feu", level=1, status=0)
+
+    slot23 = Slot(number="mkt r-3", destination="feu", level=1, status=0)
+
+    slot24 = Slot(number="mkt r-4", destination="feu", level=1, status=0)
+
+    slot25 = Slot(number="mkt r-5", destination="feu", level=1, status=0)
+
+    slot26 = Slot(number="mkt r-6", destination="feu", level=1, status=0)
+
+    slot27 = Slot(number="mkt r-7", destination="feu", level=1, status=0)
+
 
     db.session.add(register)
     db.session.add(dest)
@@ -162,6 +235,38 @@ def db_rebuild():
     db.session.add(dest2)
     db.session.add(dest3)
     db.session.add(dest4)
+    
+    db.session.add(slot)
+    db.session.add(slot1)
+    db.session.add(slot2)
+    db.session.add(slot3)
+    db.session.add(slot4)
+    db.session.add(slot5)
+    db.session.add(slot6)
+    db.session.add(slot7)
+    db.session.add(slot8)
+
+    db.session.add(slot9)
+    db.session.add(slot10)
+    db.session.add(slot11)
+    db.session.add(slot12)
+    db.session.add(slot13)
+    db.session.add(slot14)
+    db.session.add(slot15)
+    db.session.add(slot16)
+    db.session.add(slot17)
+    db.session.add(slot18)
+    db.session.add(slot19)
+    db.session.add(slot20)
+
+    db.session.add(slot21)
+    db.session.add(slot22)
+    db.session.add(slot23)
+    db.session.add(slot24)
+    db.session.add(slot25)
+    db.session.add(slot26)
+    db.session.add(slot27)
+
     db.session.commit()
     return 'ok'
 

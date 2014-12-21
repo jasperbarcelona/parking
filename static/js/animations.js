@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
 $(window).load(function() {
     $('#intro').delay(5000).fadeOut();
   });
@@ -9,6 +11,8 @@ $(window).load(function() {
 
 var height = $(window).height()-60;
 $("#container").css("height",height);
+
+
 
 $(window).resize(function(){
 	var height = $(window).height()-60;
@@ -24,9 +28,23 @@ $("#search").on('click', function() {
 
 
 $("#zoomIn").on('click', function() {
-    style = window.getComputedStyle(document.getElementById('mapContainer')),
-    zoom = style.getPropertyValue('zoom');
-	$("#mapContainer").animate({"zoom":"45%"},500);
+	var element = document.getElementById('mapContainer'),
+    style = window.getComputedStyle(element),
+    zoom = style.getPropertyValue('zoom')*100;
+    newZoom = zoom + 10;
+    if(newZoom <= 130){
+    	$("#mapContainer").css("zoom",newZoom+"%");
+    }
+});
+
+$("#zoomOut").on('click', function() {
+	var element = document.getElementById('mapContainer'),
+    style = window.getComputedStyle(element),
+    zoom = style.getPropertyValue('zoom')*100;
+    newZoom = zoom - 10;
+	if(newZoom >= 25){
+    	$("#mapContainer").css("zoom",newZoom+"%");
+    }
 });
 
 
@@ -42,7 +60,7 @@ $("#backTheme").on('click', function() {
 
 
 $(".rows").on('click', function() {
-	$("#controlPanel").animate({"bottom":"0"}, 500,'jswing');
+	$("#controlPanel").animate({"bottom":"0"},500,'jswing');
 });
 
 

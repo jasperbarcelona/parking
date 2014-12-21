@@ -5,7 +5,6 @@
 
 <body>
 	<div id="mapContainer">
-
 		<div id="feuMap">
 			<div id="malugay">
 				MALUGAY STREET
@@ -25,7 +24,13 @@
 						</div>
 					</div>
 					<div class="labelLeft">
-						<span>MKT<br>L-1</span>
+						{% if slots[0].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>L-1
+						</span>
 					</div>
 				</div>
 
@@ -43,7 +48,13 @@
 						</div>
 					</div>
 					<div class="labelLeft">
-						<span>MKT<br>L-2</span>
+						{% if slots[1].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>L-2
+						</span>
 					</div>
 				</div>
 
@@ -61,7 +72,13 @@
 						</div>
 					</div>
 					<div class="labelLeft">
-						<span>MKT<br>L-3</span>
+						{% if slots[2].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>L-3
+						</span>
 					</div>
 				</div>
 
@@ -79,7 +96,13 @@
 						</div>
 					</div>
 					<div class="labelLeft">
-						<span>MKT<br>L-4</span>
+						{% if slots[3].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>L-4
+						</span>
 					</div>
 				</div>
 
@@ -97,7 +120,13 @@
 						</div>
 					</div>
 					<div class="labelLeft">
-						<span>MKT<br>L-5</span>
+						{% if slots[4].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>L-5
+						</span>
 					</div>
 				</div>	
 
@@ -115,11 +144,17 @@
 						</div>
 					</div>
 					<div class="labelLeft">
-						<span>MKT<br>L-6</span>
+						{% if slots[5].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>L-6
+						</span>
 					</div>
 				</div>
 
-				<div class="lastBottom feuSlotsLeft">
+				<div class="feuSlotsLeft">
 					<div class="feuStopperLeft">
 						<div class="innerLeftYellow">
 						</div>
@@ -133,7 +168,13 @@
 						</div>
 					</div>
 					<div class="labelLeft">
-						<span>MKT<br>L-7</span>
+						{% if slots[6].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>L-7
+						</span>
 					</div>
 				</div>
 				
@@ -151,7 +192,13 @@
 						</div>
 					</div>
 					<div class="labelLeft">
-						<span>MKT<br>L-8</span>
+						{% if slots[7].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>L-8
+						</span>
 					</div>
 				</div>
 			</div>
@@ -180,7 +227,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-1</span>
+						{% if slots[8].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-1
+						</span>
 					</div>
 				</div>
 
@@ -198,7 +251,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-2</span>
+						{% if slots[9].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-2
+						</span>
 					</div>
 				</div>
 
@@ -216,7 +275,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-3</span>
+						{% if slots[10].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-3
+						</span>
 					</div>
 				</div>
 
@@ -234,7 +299,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-4</span>
+						{% if slots[11].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-4
+						</span>
 					</div>
 				</div>
 
@@ -252,7 +323,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-5</span>
+						{% if slots[12].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-5
+						</span>
 					</div>
 				</div>
 
@@ -270,7 +347,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-6</span>
+						{% if slots[13].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-6
+						</span>
 					</div>
 				</div>
 
@@ -288,7 +371,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-7</span>
+						{% if slots[14].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-7
+						</span>
 					</div>
 				</div>
 
@@ -306,7 +395,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-8</span>
+						{% if slots[15].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-8
+						</span>
 					</div>
 				</div>
 
@@ -324,7 +419,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-9</span>
+						{% if slots[16].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-9
+						</span>
 					</div>
 				</div>
 
@@ -342,7 +443,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-10</span>
+						{% if slots[17].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-10
+						</span>
 					</div>
 				</div>
 
@@ -360,7 +467,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-11</span>
+						{% if slots[18].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-11
+						</span>
 					</div>
 				</div>
 
@@ -378,7 +491,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-12</span>
+						{% if slots[19].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-12
+						</span>
 					</div>
 				</div>
 
@@ -396,7 +515,13 @@
 						</div>
 					</div>
 					<div class="labelMid">
-						<span>MKT<br>M-13</span>
+						{% if slots[20].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>M-13
+						</span>
 					</div>
 				</div>
 				<div id="zuelig">
@@ -420,7 +545,13 @@
 						</div>
 					</div>
 					<div class="labelRight">
-						<span>MKT<br>R-1</span>
+						{% if slots[21].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>R-1
+						</span>
 					</div>
 				</div>
 
@@ -438,7 +569,13 @@
 						</div>
 					</div>
 					<div class="labelRight">
-						<span>MKT<br>R-2</span>
+						{% if slots[22].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>R-2
+						</span>
 					</div>
 				</div>
 
@@ -456,7 +593,13 @@
 						</div>
 					</div>
 					<div class="labelRight">
-						<span>MKT<br>R-3</span>
+						{% if slots[23].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>R-3
+						</span>
 					</div>
 				</div>
 
@@ -474,7 +617,13 @@
 						</div>
 					</div>
 					<div class="labelRight">
-						<span>MKT<br>R-4</span>
+						{% if slots[24].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>R-4
+						</span>
 					</div>
 				</div>
 				
@@ -492,7 +641,13 @@
 						</div>
 					</div>
 					<div class="labelRight">
-						<span>MKT<br>R-5</span>
+						{% if slots[25].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>R-5
+						</span>
 					</div>
 				</div>
 
@@ -510,7 +665,13 @@
 						</div>
 					</div>
 					<div class="labelRight">
-						<span>MKT<br>R-6</span>
+						{% if slots[26].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>R-6
+						</span>
 					</div>
 				</div>
 				
@@ -528,7 +689,13 @@
 						</div>
 					</div>
 					<div class="labelRight">
-						<span>MKT<br>R-7</span>
+						{% if slots[27].status == 0 %}
+						<span class="available">
+						{% else %}
+						<span class="notAvailable">
+						{% endif %}
+							MKT<br>R-7
+						</span>
 					</div>
 				</div>	
 				<div id="buendia">

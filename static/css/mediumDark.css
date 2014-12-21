@@ -113,7 +113,7 @@
 	#navigation{
 		position: fixed;
 		top: 60px;
-		z-index: 90;
+		z-index: 100;
 		height: 100%;
 		width: 80%;
 	}
@@ -449,10 +449,9 @@
 	#mapContainer{
 		height: 100%;
 		width: 100%;
-		overflow: auto;
-		overflow-x: auto;
-		zoom: 40%;
+		zoom: 45%;
 		-webkit-overflow-scrolling: touch;
+		-webkit-overflow-x-scrolling: touch;
 	}
 
 	#malugay{
@@ -472,6 +471,7 @@
 		font-size: 40px;
 		margin-top: 200px;
 		margin-left: 350px;
+		margin-bottom: 100px;
 		font-style: italic;
 	}
 
@@ -556,8 +556,8 @@
 	.feuSlotsLeft{
 		height: 75px;
 		width: 120px;
-		border-top: 2px solid #1CC4C5;
-		border-bottom: 2px solid #1CC4C5;
+		border-top: 2px solid #404040;
+		border-bottom: 2px solid #404040;
 	}
 
 	.feuStopperLeft{
@@ -565,6 +565,7 @@
 		margin-top: 5px;
 		height: 55px;
 		width: 10px;
+		background-color: #1E1E1E;
 	}
 
 	.feuStopperRight{
@@ -572,9 +573,10 @@
 		margin-top: 5px;
 		height: 55px;
 		width: 10px;
+		background-color: #1E1E1E;
 	}
 
-	.innerLeftYellow{
+	/*.innerLeftYellow{
 		height: 20%;
 		background-color: yellow;
 	}
@@ -582,23 +584,24 @@
 	.innerLeftBlack{
 		height: 20%;
 		background-color: black;
-	}
+	}*/
 
 	.feuSlotsBottom{
 		float: left;
 		height: 110px;
 		width: 75px;
-		border-left: 2px solid #1CC4C5;
-		border-right: 2px solid #1CC4C5;
+		border-left: 2px solid #404040;
+		border-right: 2px solid #404040;
 	}
 
 	.feuStopperBottom{
 		margin-left: 5px;
 		width: 61px;
 		height: 10px;
+		background-color: #1E1E1E;
 	}
 
-	.innerBottomYellow{
+	/*.innerBottomYellow{
 		float: left;
 		width: 20%;
 		background-color: yellow;
@@ -610,13 +613,13 @@
 		width: 20%;
 		background-color: black;
 		height: 10px;
-	}
+	}*/
 
 	.feuSlotsRight{
 		height: 75px;
 		width: 120px;
-		border-top: 2px solid #1CC4C5;
-		border-bottom: 2px solid #1CC4C5;
+		border-top: 2px solid #404040;
+		border-bottom: 2px solid #404040;
 	}
 
 	.lastTop{
@@ -640,7 +643,7 @@
 
 	.labelLeft{
 		float: left;
-		color: green;
+		
 		width: 110px;
 		height: 75px;
 		font-size: 24px;
@@ -650,7 +653,7 @@
 
 	.labelRight{
 		float: right;
-		color: green;
+		
 		width: 110px;
 		height: 75px;
 		font-size: 24px;
@@ -659,7 +662,7 @@
 	}
 
 	.labelMid{
-		color: green;
+		
 		width: 70px;
 		height: 110px;
 		font-size: 24px;
@@ -668,25 +671,85 @@
 		padding-top: 20px;
 	}
 
+	.available{
+		color: #1CC4C5;
+	}
+
+	.notAvailable{
+		color: red;
+	}
+
 	#controlPanel{
 		position: absolute;
 		z-index: 99;
 		height: 80px;
 		width: 100%;
-		border: 1px solid red;
+		background-color: #1A1A1A;
 		bottom:-80px;	
 	}
 
-	.mapContainer::-webkit-scrollbar{
+	#controlLeft{
+		padding-top: 15px;
+		float: left;
+		height: 80px;
+		width: 50%;
+		color: #fff;
+		text-align: center;
+	}
+	#controlRight{
+		float: left;
+		height: 80px;
+		width: 50%;
+	}
+
+	#availLabel{
+		font-size: 10px;
+		font-weight: bold;
+	}
+
+	#mapContainer::-webkit-scrollbar{
 		width: 0 !important
 	}
 
-	.mapContainer{
+	#mapContainer{
 		-ms-overflow-style: none;
 	}
 
-	.mapContainer{
+	#mapContainer{
 		overflow: -moz-scrollbars-none;
+	}
+
+	.zoom{
+		float: right;
+		background-color: #404040;
+		height: 60px;
+		width: 60px;
+		margin: 8px;
+		color: #fff;
+		font-size: 28px;
+		border: none;
+		border-radius: 50% !important;
+	}
+
+	.zoom:focus{
+		border:none !important;
+		outline:none !important;
+		background-color: #404040;
+		color: #fff;
+	}
+
+	.zoom:active{
+		background-color: #E6E6E6;
+	}
+
+	.zoom:hover{
+		background-color: #E6E6E6;
+		color: #404040;
+	}
+
+	#availCount{
+		color: #1CC4C5;
+		font-size: 28px;
 	}
 
 </style>

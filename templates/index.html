@@ -59,7 +59,6 @@
 
 				{% elif scheme=="orange" %}
 				<img id="cone" src="../static/images/coneOrange.jpg">
-
 				{% endif %}
 			</div>
 		</div>
@@ -167,7 +166,14 @@
 			<!-- <img id="preloader" src="../static/images/loading.GIF"> -->
 		</div>
 		<div id="controlPanel">
-			<input type="button" id="zoomIn" value="zoom">
+			<div id="controlLeft">
+				
+			</div>
+			<div id="controlRight">
+				
+				<button class="zoom btn btn-default" id="zoomOut">-</button>
+				<button class="zoom btn btn-default" id="zoomIn">+</button>
+			</div>
 		</div>
 
 	<script src="../static/js/jquery-ui.js"></script>
