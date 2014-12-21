@@ -1,12 +1,11 @@
 function map(page){
-var $loading = $('#loading').hide();
-$loading.show();
+$('#loading').show();
 var page = page;
 $.post('/map',{page:page},
 function(data){
 $('#container').html(data);
 });
-$loading.hide();
+$('#loading').hide();
 }
 
 setTimeout(function getCount(page){
