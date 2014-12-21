@@ -162,11 +162,22 @@ def refresh_count():
     return ('',204)
 
 
-
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
     session.clear()
     return redirect('/login')
+
+
+@app.route('/update', methods=['GET', 'POST'])
+def update_db():
+    destination = flask.request.args.get('dest')
+    number = flask.request.args.get('num')
+    status = flask.request.args.get('status')
+
+    slot_to_update = Slot.query.filter_by(destination=destination, number=number).first()
+    slot_to_update.status = status
+    db.session.commit()
+    return 'Database Updated Successfully'
 
 
 @app.route('/db/rebuild', methods=['GET', 'POST'])
