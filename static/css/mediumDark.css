@@ -2,20 +2,15 @@
 
 	@font-face
 	{
-		font-family: Quicksand;
-		src:url('../fonts/clearview.ttf');
+		font-family: Raleway;
+		src:url('../fonts/Raleway-Medium.otf');
 	}
 	@font-face
 	{
-		font-family: Quicksand;
-		src:url('../fonts/clearview.otf');
+		font-family: Raleway;
+		src:url('../fonts/Raleway-Medium.otf');
 	}
 
-	@font-face
-	{
-		font-family: Exo;
-		src:url('../fonts/Bariol_Regular.otf');
-	}
 
 	html,body{
 		position: fixed;
@@ -26,7 +21,7 @@
 	    overflow-x:hidden;
 	    background-color: #161616;
 	    height: 100%;
-	    font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	    font-family: Raleway, sans-serif;
 	}
 
 	span:hover{
@@ -714,7 +709,7 @@
 	}
 
 	#availLabel{
-		font-size: 10px;
+		font-size: 12px;
 		font-weight: bold;
 	}
 
@@ -755,13 +750,13 @@
 	}
 
 	.zoom:hover{
-		background-color: #E6E6E6;
-		color: #404040;
+		background-color: #404040;
+		color: #fff;
 	}
 
 	#availCount{
 		color: #1CC4C5;
-		font-size: 28px;
+		font-size: 32px;
 	}
 
 </style>
