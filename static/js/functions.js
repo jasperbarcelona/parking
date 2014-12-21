@@ -4,9 +4,12 @@ var page = page;
 $.post('/map',{page:page},
 function(data){
 $('#container').html(data);
-});
 $('#loading').hide();
+});
+
 }
+
+
 
 setTimeout(function getCount(page){
 $.post('/count',
