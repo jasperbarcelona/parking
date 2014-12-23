@@ -254,7 +254,7 @@
 		height: 60px;
 		color: #f5f5f5;
 		font-size: 20px;
-		font-weight: bold;	
+		font-weight: bold;
 	}
 
 	#head{
@@ -459,12 +459,7 @@
 	}
 
 	#mapContainer{
-		height: 100%;
-		width: 100%;
 		zoom: 60%;
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
-		-webkit-overflow-x-scrolling: touch;
 	}
 
 	#malugay{

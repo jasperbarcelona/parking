@@ -6,9 +6,7 @@ function(data){
 $('#container').html(data);
 $('#loading').hide();
 });
-
 }
-
 
 
 setTimeout(function getCount(page){
@@ -17,3 +15,5 @@ function(data){
 $('#controlLeft').html(data);
 });
 },2000);
+
+
