@@ -15,7 +15,7 @@ import os
 app = flask.Flask(__name__)
 db = SQLAlchemy(app)
 app.secret_key = '234234rfascasascqweqscasefsdvqwefe2323234dvsv'
-
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 FACEBOOK_APP_ID = '539244542865228'
 FACEBOOK_APP_SECRET = 'efaee0037f9320831895a5e9aa4d1bc6'
 
