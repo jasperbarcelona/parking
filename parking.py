@@ -149,6 +149,8 @@ def map():
 
 @app.route('/count', methods=['GET', 'POST'])
 def get_count():
+    if not session['page'] or session['page'] not in PAGES:
+        session['available'] = 0
     session['available'] = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
     return flask.render_template('available.html', available=session['available'])
 
