@@ -5,15 +5,11 @@ $.post('/map',{page:page},
 function(data){
 $('#container').html(data);
 $('#loading').hide();
+$('#controlLoad').hide();
 });
 }
 
 
-setTimeout(function getCount(page){
-$.post('/count',
-function(data){
-$('#controlLeft').html(data);
-});
-},2000);
+
 
 

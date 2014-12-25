@@ -9,17 +9,24 @@ from flask.ext.admin import Admin, BaseView, expose
 from flask import render_template, request
 from flask import session, redirect
 from flask_oauth import OAuth
+from functools import wraps
 import time
 import os
+
 
 app = flask.Flask(__name__)
 db = SQLAlchemy(app)
 app.secret_key = '234234rfascasascqweqscasefsdvqwefe2323234dvsv'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+# os.environ['DATABASE_URL']
 FACEBOOK_APP_ID = '539244542865228'
 FACEBOOK_APP_SECRET = 'efaee0037f9320831895a5e9aa4d1bc6'
 
 oauth = OAuth()
+
+PAGES = [
+'feu'
+]
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -73,8 +80,8 @@ def pop_login_session():
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if not session:
-        return redirect('login')
+    # if not session:
+    #     return redirect('login')
     session['changed'] = False
     destinations = Destination.query.all()
     return flask.render_template('index.html',scheme="dark", dest=destinations)
@@ -134,6 +141,8 @@ def google_login():
 @app.route('/map', methods=['GET', 'POST'])
 def map():
     session['page'] = flask.request.form.get('page')
+    if not session['page'] or session['page'] not in PAGES:
+        return flask.render_template('notfound.html')
     slots = Slot.query.filter_by(destination=session['page'], level=1).all()
     return flask.render_template(session['page']+'.html', slots=slots)
 

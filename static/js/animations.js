@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+var refreshMap;
+var refreshSlotCount;
+/*clearInterval(refresh);
+clearInterval(refreshSlotCount);*/
+
 $('#loading').hide();
 
 $(window).load(function() {
@@ -61,14 +66,22 @@ $("#backTheme").on('click', function() {
 
 $(".rows").on('click', function() {
 	$("#controlPanel").animate({"bottom":"0"},500,'jswing');
-	setInterval(function refresh(){
+	
+	setTimeout(function getCount(page){
+	$.post('/count',
+	function(data){
+	$('#controlLeft').html(data);
+	});
+	},2000);
+
+	refresh = setInterval(function refresh(){
 	$.post('/refresh',
 	function(data){
 	$('#container').html(data);
 	});
 	},5000);
 
-	setInterval(function refresh(){
+	refreshSlotCount = setInterval(function refreshcount(){
 	$.post('/refreshcount',
 	function(data){
 	$('#controlLeft').html(data);
