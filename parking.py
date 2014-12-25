@@ -157,6 +157,8 @@ def get_count():
 
 @app.route('/refresh', methods=['GET', 'POST'])
 def refresh_map():
+    if not session['page'] or session['page'] not in PAGES:
+        return ('',204)
     if not session['available'] == Slot.query.filter_by(destination=session['page'], level=1, status=0).count():
         slots = Slot.query.filter_by(destination=session['page'], level=1).all()
         session['available'] = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
