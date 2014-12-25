@@ -73,8 +73,8 @@ def pop_login_session():
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    # if not session:
-    #     return redirect('login')
+    if not session:
+        return redirect('login')
     session['changed'] = False
     destinations = Destination.query.all()
     return flask.render_template('index.html',scheme="dark", dest=destinations)
