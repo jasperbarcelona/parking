@@ -143,7 +143,7 @@ def map():
     session['page'] = flask.request.form.get('page')
     if not session['page'] or session['page'] not in PAGES:
         return flask.render_template('notfound.html')
-    slots = Slot.query.filter_by(destination=session['page'], level=1).all()
+    slots = Slot.query.filter_by(destination=session['page'], level=1).order_by(Slot.id) 
     return flask.render_template(session['page']+'.html', slots=slots)
 
 
@@ -157,10 +157,8 @@ def get_count():
 
 @app.route('/refresh', methods=['GET', 'POST'])
 def refresh_map():
-    if not session['page'] or session['page'] not in PAGES:
-        return ('',204)
     if not session['available'] == Slot.query.filter_by(destination=session['page'], level=1, status=0).count():
-        slots = Slot.query.filter_by(destination=session['page'], level=1).all()
+        slots = Slot.query.filter_by(destination=session['page'], level=1).order_by(Slot.id) 
         session['available'] = Slot.query.filter_by(destination=session['page'], level=1, status=0).count()
         session['changed'] = True
         return flask.render_template(session['page']+'.html', slots=slots)
