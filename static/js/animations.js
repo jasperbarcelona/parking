@@ -66,6 +66,7 @@ $("#backTheme").on('click', function() {
 
 $(".rows").on('click', function() {
 	$("#controlPanel").animate({"bottom":"0"},500,'jswing');
+	$("#container").css("overflow-x","scroll");
 
 	setTimeout(function getCount(page){
 	$.post('/count',
