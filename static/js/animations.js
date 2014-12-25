@@ -66,27 +66,27 @@ $("#backTheme").on('click', function() {
 
 $(".rows").on('click', function() {
 	$("#controlPanel").animate({"bottom":"0"},500,'jswing');
-	
+
 	setTimeout(function getCount(page){
 	$.post('/count',
 	function(data){
 	$('#controlLeft').html(data);
 	});
-	},2000);
+	},3000);
 
 	refresh = setInterval(function refresh(){
 	$.post('/refresh',
 	function(data){
 	$('#container').html(data);
 	});
-	},5000);
+	},6000);
 
 	refreshSlotCount = setInterval(function refreshcount(){
 	$.post('/refreshcount',
 	function(data){
 	$('#controlLeft').html(data);
 	});
-	},6000);
+	},8000);
 });
 
 
