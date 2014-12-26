@@ -147,6 +147,13 @@ def map():
     return flask.render_template(session['page']+'.html', slots=slots)
 
 
+@app.route('/home', methods=['GET', 'POST'])
+def home():
+    session['available'] = 0
+    destinations = Destination.query.all()
+    return flask.render_template('home.html',scheme="dark", dest=destinations)
+
+
 @app.route('/count', methods=['GET', 'POST'])
 def get_count():
     if not session['page'] or session['page'] not in PAGES:

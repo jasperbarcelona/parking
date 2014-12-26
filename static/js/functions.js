@@ -9,6 +9,15 @@ $('#controlLoad').hide();
 });
 }
 
+function home(){
+$('#loading').show();
+$.post('/home',
+function(data){
+$('#container').html(data);
+$('#loading').hide();
+});
+}
+
 
 
 

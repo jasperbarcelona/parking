@@ -65,8 +65,12 @@ $("#backTheme").on('click', function() {
 
 
 $(".rows").on('click', function() {
-	$("#controlPanel").animate({"bottom":"0"},500,'jswing');
+	$("#controlPanel").show();
 	$("#container").css("overflow-x","scroll");
+	$("#toggleDown").hide();
+	$("#parking").hide();
+	$("#backMap").show();
+	$(".mapName").show();
 
 	setTimeout(function getCount(page){
 	$.post('/count',
@@ -80,16 +84,28 @@ $(".rows").on('click', function() {
 	function(data){
 	$('#container').html(data);
 	});
-	},6000);
+	},5000);
 
 	refreshSlotCount = setInterval(function refreshcount(){
 	$.post('/refreshcount',
 	function(data){
 	$('#controlLeft').html(data);
 	});
-	},8000);
+	},6000);
 });
 
+
+$("#backMap").on('click', function() {
+	clearInterval(refresh);
+	clearInterval(refreshSlotCount);
+	$("#controlPanel").hide();
+	$("#container").css("overflow-x","hidden");
+	$("#backMap").hide();
+	$(".mapName").hide();
+	$("#toggleDown").show();
+	$("#parking").show();
+	
+});
 
 $("#parking").on('click', function() {
 	var $this = jQuery(this);

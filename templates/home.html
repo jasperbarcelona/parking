@@ -1,0 +1,97 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+	{% if scheme=="dark" %}
+	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
+	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumDark.css">
+	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumDark.css">
+
+	{% elif scheme=="light" %}
+	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
+	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumLight.css">
+	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumLight.css">
+
+	{% elif scheme=="orange" %}
+	<link rel="stylesheet" media="screen and (min-width: 0px)" href="../static/css/xs.css">
+	<link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 1000px)" href="../static/css/mediumOrange.css">
+	<link rel="stylesheet" media="screen and (min-width: 1224px)" href="../static/css/mediumOrange.css">
+	{% endif %}
+
+	<script src="../static/js/jquery-1.11.0.min.js"></script>
+	<script src="../static/js/easing.js"></script>
+	<script src="../static/js/animations.js"></script>
+</head>
+<body>
+<div id="body">
+				
+					<br>
+					<span class="destinations">SAVED DESTINATIONS</span>
+					<div id="recent" class="lighter places">
+						<div class="rows">
+							<div class="placePic">
+								<img class="image" src="../static/images/glorietta.jpg">
+							</div>
+							<div class="placeDesc">
+								<span class="placeName">Glorietta</span>
+								<span class="placeAdd">Makati</span>
+							</div>
+							<div class="arrow">
+								<span>></span>
+							</div>
+						</div>
+
+						<div class="rows">
+							<div class="placePic">
+								<img class="image" src="../static/images/magnolia.jpg">
+							</div>
+							<div class="placeDesc">
+								<span class="placeName">Robinsons Magnolia</span><br>
+								<span class="placeAdd">Quezon City</span>
+							</div>
+							<div class="arrow">
+								<span>></span>
+							</div>
+						</div>
+
+						<div class="rows">
+							<div class="placePic">
+								<img class="image" src="../static/images/greenbelt.jpg">
+							</div>
+							<div class="placeDesc">
+								<span class="placeName">Greenbelt</span>
+								<span class="placeAdd">Makati City</span>
+							</div>
+							<div class="arrow">
+								<span>></span>
+							</div>
+						</div>
+					</div>	
+
+					<span class="destinations">ALL DESTINATIONS</span>		
+					<div id="all" class="lighter places">
+						{% for a in dest %}
+							<div id="{{a.page}}" class="rows" onclick="map(this.id)">
+								<div class="placePic">
+									<img class="image" src="{{a.image}}">
+								</div>
+								<div class="placeDesc">
+									<span class="placeName">{{a.name}}</span>
+									<span class="placeAdd">{{a.city}}</span>
+								</div>
+								<div class="arrow">
+									<span>></span>
+								</div>
+							</div>
+						{% endfor %}
+					</div>			
+				</center>
+				<br><br>
+			</div>
+			<script src="../static/js/jquery-ui.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/headroom.js"></script>
+	<script src="../static/js/functions.js"></script>
+		</body>
