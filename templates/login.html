@@ -44,10 +44,10 @@
 
 	<div id="loginContainer" class="lighter">
 		<div id="loginForm">
-			<img id="coneLogin" src="../static/images/coneDark.jpg"><br>
-			Because we hate login forms.<br>
 			<a href="/facebooklogin"><button id="facebook" type="button" class="loginBtn btn btn-primary">Sign In with Facebook</button></a>
 			<a><button id="authorize-button" type="button" onclick="handleAuthClick()" class="loginBtn btn btn-danger">Sign In with Google</button></a>	
+
+			<span id="or">Or</span>
 		</div>
 	</div>
 
@@ -66,15 +66,14 @@
 		}
 
 		function makeApiCall(){
+			var email = '';
+			var displayName = ''; 
 			gapi.client.setApiKey(apiKey);
 			gapi.client.load('oauth2', 'v2', function(){
 				var request = gapi.client.oauth2.userinfo.get();
 
 				request.execute(function(logResponse){
-					alert(logResponse.email);
-					/*$('<form action="/googlelogin" method="POST">' + 
-    				'<input type="hidden" name="email" value="' + logResponse.email + '">' +
-    				'</form>').submit();*/
+					email = logResponse.email;
 				});
 			});
 			gapi.client.setApiKey(apiKey);
@@ -84,12 +83,13 @@
 				});
 
 				request.execute(function(logResponse){
-					alert(logResponse.displayName);
-					/*$('<form action="/googlelogin" method="POST">' + 
-    				'<input type="hidden" name="email" value="' + logResponse.email + '">' +
-    				'</form>').submit();*/
+					displayName = logResponse.displayName;
 				});
 			});
+			$('<form action="/googlelogin" method="POST">' + 
+			'<input type="hidden" name="email" value="' + email + '">' +
+			'<input type="hidden" name="displayName" value="' + displayName + '">' +
+			'</form>').submit();
 		}
 	</script>
 
