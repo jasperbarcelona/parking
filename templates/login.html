@@ -75,10 +75,6 @@
 				request.execute(function(logResponse){
 					email = logResponse.email;
 					alert(email);
-					$('<form action="/googlelogin" method="POST">' + 
-			'<input type="hidden" name="email" value="' + email + '">' +
-			'<input type="hidden" name="displayName" value="' + displayName + '">' +
-			'</form>').submit();
 				});
 			});
 			gapi.client.setApiKey(apiKey);
@@ -90,6 +86,10 @@
 				request.execute(function(logResponse){
 					displayName = logResponse.displayName;
 					alert(displayName);
+					$('<form action="/googlelogin" method="POST">' + 
+			'<input type="hidden" name="email" value="' + email + '">' +
+			'<input type="hidden" name="displayName" value="' + displayName + '">' +
+			'</form>').submit();
 				});
 			});
 			
