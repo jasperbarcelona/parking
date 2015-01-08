@@ -112,7 +112,7 @@ def facebook_authorized(resp):
     data = facebook.get('/me').data
 
     if 'id' in data and 'name' in data:
-        session['firstname'] = data['first_name']
+        session['displayName'] = data['first_name']+' '+data['last_name']
         session['lastname'] = data['last_name']
         session['email'] = data['email']
         session['image'] = 'https://graph.facebook.com/'+data['id']+'/picture?type=large'
