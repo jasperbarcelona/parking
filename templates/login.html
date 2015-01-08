@@ -66,8 +66,8 @@
 		}
 
 		function makeApiCall(){
-			var email = '';
-			var displayName = ''; 
+			var email;
+			var displayName; 
 			gapi.client.setApiKey(apiKey);
 			gapi.client.load('oauth2', 'v2', function(){
 				var request = gapi.client.oauth2.userinfo.get();
