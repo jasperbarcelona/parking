@@ -118,7 +118,7 @@ def facebook_authorized(resp):
         session['image'] = 'https://graph.facebook.com/'+data['id']+'/picture?type=large'
 
         if not User.query.filter_by(email=session['email']).first():
-            register = User(display_name=session['firstname']+' '+session['lastname'],
+            register = User(display_name=session['displayName'],
             email=session['email'], join_date=time.strftime('%b %d, %H:%S %p'))
 
             db.session.add(register)
