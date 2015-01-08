@@ -30,9 +30,8 @@ PAGES = [
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    facebook_id = db.Column(db.String(64), unique=True)
-    first_name = db.Column(db.String(64))
-    last_name = db.Column(db.String(64))
+    display_name = db.Column(db.String(64))
+    email = db.Column(db.String(64))
     join_date = db.Column(db.String(64))
 
 class Destination(db.Model):
@@ -113,13 +112,14 @@ def facebook_authorized(resp):
     data = facebook.get('/me').data
 
     if 'id' in data and 'name' in data:
-        session['facebookId'] = data['id']
         session['firstname'] = data['first_name']
         session['lastname'] = data['last_name']
+        session['email'] = data['email']
 
-        if not User.query.filter_by(facebook_id=session['facebookId']).first():
-            register = User(facebook_id=session['facebookId'], first_name=session['firstname'],
-            last_name=session['lastname'], join_date=time.strftime('%b %d, %H:%S %p'))
+        if not User.query.filter_by(email=session['email']).first():
+            register = User(display_name=session['firstname']+' '+session['lastname'],
+            email=session['email'], join_date=time.strftime('%b %d, %H:%S %p'))
+
             db.session.add(register)
             db.session.commit()
     return redirect(next_url)
@@ -134,7 +134,14 @@ def change_theme():
 
 @app.route('/googlelogin', methods=['GET', 'POST'])
 def google_login():
-    email = flask.request.form.get('email')
+    session['email'] = flask.request.form.get('email')
+    session['displayName'] = flask.request.form.get('displayName')
+    if not User.query.filter_by(email=session['email']).first():
+            register = User(display_name=session['displayName'],
+            email=session['email'], join_date=time.strftime('%b %d, %H:%S %p'))
+
+            db.session.add(register)
+            db.session.commit()
     return flask.render_template('posttest.html',email=email)
 
 
@@ -202,8 +209,8 @@ def update_db():
 def db_rebuild():
     db.drop_all()
     db.create_all()
-    register = User(facebook_id=123456, first_name='Mang',
-    last_name='Kanor', join_date=time.strftime('%b %d, %H:%S %p'))
+    register = User(display_name='Mang Kanor', email='kanor.mang@gmail.com',
+    join_date=time.strftime('%b %d, %H:%S %p'))
 
     dest = Destination(name="Glorietta", city="Makati City", 
     image="../static/images/glorietta.jpg", page="feu")
