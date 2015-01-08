@@ -142,7 +142,7 @@ def google_login():
 
             db.session.add(register)
             db.session.commit()
-    return flask.render_template('posttest.html',email=email)
+    return flask.render_template('posttest.html',email=session['email'])
 
 
 @app.route('/map', methods=['GET', 'POST'])
