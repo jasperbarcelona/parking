@@ -79,13 +79,13 @@ def pop_login_session():
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    # if not session:
-    #     return redirect('login')
+    if not session:
+        return redirect('login')
     session['changed'] = False
     destinations = Destination.query.all()
-    return flask.render_template('index.html',scheme="dark", dest=destinations)
+    return flask.render_template('index.html',scheme="dark", dest=destinations, display_name=session['displayName'], image=session['image'])
 
-# , facebook_id=session['facebookId'], first_name=session['firstname'], last_name=session['lastname']
+# , first_name=session['firstname'], last_name=session['lastname']
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
     if session:
@@ -115,6 +115,7 @@ def facebook_authorized(resp):
         session['firstname'] = data['first_name']
         session['lastname'] = data['last_name']
         session['email'] = data['email']
+        session['image'] = 'https://graph.facebook.com/'+data['id']+'/picture?type=large'
 
         if not User.query.filter_by(email=session['email']).first():
             register = User(display_name=session['firstname']+' '+session['lastname'],
@@ -136,13 +137,14 @@ def change_theme():
 def google_login():
     session['email'] = flask.request.form.get('email')
     session['displayName'] = flask.request.form.get('displayName')
+    session['image'] = flask.request.form.get('image')
     if not User.query.filter_by(email=session['email']).first():
             register = User(display_name=session['displayName'],
             email=session['email'], join_date=time.strftime('%b %d, %H:%S %p'))
 
             db.session.add(register)
             db.session.commit()
-    return flask.render_template('posttest.html',email=session['email'], name=session['displayName'])
+    return flask.render_template('index.html',scheme="dark", dest=destinations, display_name=session['displayName'], image=session['image'])
 
 
 @app.route('/map', methods=['GET', 'POST'])
