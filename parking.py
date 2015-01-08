@@ -144,7 +144,7 @@ def google_login():
 
             db.session.add(register)
             db.session.commit()
-    return flask.render_template('index.html',scheme="dark", dest=destinations, display_name=session['displayName'], image=session['image'])
+    return redirect('/')
 
 
 @app.route('/map', methods=['GET', 'POST'])
