@@ -83,7 +83,7 @@ def index():
         return redirect('login')
     session['changed'] = False
     destinations = Destination.query.all()
-    return flask.render_template('index.html',scheme="dark", dest=destinations, display_name=session['displayName'], image=session['image'])
+    return flask.render_template('index.html',scheme="dark", dest=destinations, image=session['image'])
 
 # , first_name=session['firstname'], last_name=session['lastname']
 @app.route('/login', methods=['GET', 'POST'])
