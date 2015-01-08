@@ -83,7 +83,7 @@ def index():
         return redirect('login')
     session['changed'] = False
     destinations = Destination.query.all()
-    return flask.render_template('index.html',scheme="dark", dest=destinations, image=session['image'])
+    return flask.render_template('index.html',scheme="dark", dest=destinations, display_name=session['displayName'], image=session['image'])
 
 # , first_name=session['firstname'], last_name=session['lastname']
 @app.route('/login', methods=['GET', 'POST'])
@@ -113,7 +113,6 @@ def facebook_authorized(resp):
 
     if 'id' in data and 'name' in data:
         session['displayName'] = data['first_name']+' '+data['last_name']
-        session['lastname'] = data['last_name']
         session['email'] = data['email']
         session['image'] = 'https://graph.facebook.com/'+data['id']+'/picture?type=large'
 
